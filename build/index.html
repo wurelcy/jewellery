@@ -4,46 +4,64 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="">
-    <title></title>
+    <title>CH Jewellery</title>
     <link rel="stylesheet" href="css/styles.min.css">
   </head>
   <body class="page-body">
     <header class="header">
-        <div class="header__wrapper">
-          <div class="header__search">
-            <svg width="14" height="14">
-              <use xlink:href="#icon-search"></use>
-            </svg>
-            <label for="search" class="visually-hidden">What are looking for?</label>
-            <input type="text" placeholder="Type here to search" id="search">
-          </div>
-          <a class="header__logo">
-            <svg aria-label="Logo" width="66" height="66">
-              <use xlink:href="#icon-logo"></use>
-            </svg>
-          </a>
-          <a href="login.html">Login</a>
-          <a href="#">Cart <span>0</span></a>
+      <div class="header__wrapper">
+        <button class="header__toggle" aria-label="Open menu"></button>
+        <div class="header__search">
+          <svg width="14" height="14">
+            <use xlink:href="#icon-search"></use>
+          </svg>
+          <label for="search" class="visually-hidden">What are looking for?</label>
+          <input type="text" placeholder="Type here to search" id="search">
         </div>
-        <nav class="hedaer__nav main-nav">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a href="#">What's new</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#">Chokers</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#">Necklaces</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#">Rings</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#">Earrings</a>
-            </li>
-          </ul>
-        </nav>
+        <a class="header__logo" aria-label="Company logo">
+          <svg aria-label="Logo" width="66" height="66">
+            <use xlink:href="#icon-logo"></use>
+          </svg>
+        </a>
+        <a href="login.html" class="header__login">Login</a>
+        <a href="#" class="header__cart">
+          <svg aria-label="Logo" width="14" height="14">
+            <use xlink:href="#icon-cart"></use>
+          </svg>
+          <span>Cart 0</span>
+        </a>
+      </div>
+      <nav class="hedaer__nav main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="#">What's new</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Chokers</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Necklaces</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Rings</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Earrings</a>
+          </li>
+        </ul>
+        <ul class="main-nav__mobile">
+          <li>
+            <a class="main-nav__link" href="#">About CH</a>
+          </li>
+          <li>
+            <a class="main-nav__link" href="#">Stores & Hours</a>
+          </li>
+          <li>
+            <a class="main-nav__link" href="#">Contact Us</a>
+          </li>
+        </ul>
+        <a href="login.html" class="main-nav__login">Login</a>
+      </nav>
     </header>
     <main class="main-page">
       <h1>The main page of CH jewellery</h1>
