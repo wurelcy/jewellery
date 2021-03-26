@@ -1,0 +1,22 @@
+.info {
+  margin-right: 67px;
+}
+
+@media (max-width: 1160px) {
+  .info {
+    margin-right: auto;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .info {
+    margin-right: 87px;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .info {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+}

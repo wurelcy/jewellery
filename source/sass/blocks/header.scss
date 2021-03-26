@@ -1,0 +1,172 @@
+.header {
+  padding-top: 30px;
+  font-weight: 500;
+}
+
+.header__wrapper {
+  display: flex;
+  width: 86%;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.header__toggle {
+  display: none;
+}
+
+.header__logo {
+  margin: 0 auto;
+}
+
+.header__logo svg {
+  fill: $brown;
+}
+
+.header__search svg {
+  vertical-align: middle;
+  margin-right: 15px;
+  fill: $darkest;
+}
+
+.header__search input {
+  border: 0;
+}
+
+.header__login {
+  margin-right: 35px;
+}
+
+.header__cart svg {
+  display: none;
+}
+
+@media (max-width: $tablet-width) {
+  .header__wrapper {
+    align-items: center;
+    flex-wrap: wrap;
+    width: 86%;
+  }
+
+  .header__toggle {
+    display: block;
+    z-index: 2;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    width: 25px;
+    height: 16px;
+    position: relative;
+    outline: none;
+  }
+
+  .header__toggle span {
+    width: 100%;
+    display: block;
+    height: 2px;
+    background-color: $darkest;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $darkest;
+      top: 0;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    &::before {
+      transform: translate(0, 0px);
+    }
+
+    &::after {
+      transform: translate(0, 14px);
+    }
+  }
+
+  .header__search,
+  .header__login {
+    display: none;
+  }
+
+  .header__cart span {
+    display: none;
+  }
+
+  .header__cart svg {
+    display: block;
+    stroke: $darkest;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .header--opened,
+  .header--nojs {
+    background-color: $brown;
+    color: $white;
+  }
+
+  .header--opened .header__cart svg,
+  .header--nojs .header__cart svg {
+    stroke: $white;
+  }
+
+  .header--opened .header__logo svg,
+  .header--nojs .header__logo svg {
+    fill: $white;
+  }
+
+  .header--opened .header__toggle span,
+  .header--nojs .header__toggle span {
+    background-color: $white;
+
+    &::before,
+    &::after {
+      background-color: $white;
+      transition: transform 0.4s ease-in-out;
+    }
+  }
+
+  .header--opened .header__search,
+  .header--nojs .header__search {
+    display: block;
+    order: 1;
+    flex-grow: 1;
+    flex-basis: 100%;
+    margin-top: 40px;
+    padding: 12px;
+    border-radius: 21px;
+    background-color: rgba($white, 0.15);
+  }
+
+  .header--opened .header__search input,
+  .header--nojs .header__search input {
+    background-color: transparent;
+    color: $white;
+
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  .header--opened .header__search svg,
+  .header--nojs .header__search svg {
+    fill: $white;
+    width: 16px;
+    height: 16px;
+  }
+
+  .header--opened .header__nav,
+  .header--nojs .header__nav {
+    display: block;
+  }
+
+  .header--nojs .header__toggle {
+    display: none;
+  }
+}
