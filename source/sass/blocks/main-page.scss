@@ -1,0 +1,32 @@
+.top-wrapper {
+  background-image: url('../img/bg-main@1x.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.top-wrapper__overlay {
+  width: 100%;
+  padding: 195px 0;
+  background-color: rgba($overlay, 0.7);
+}
+
+.top-wrapper p {
+  margin: 0;
+  font-family: $cormorant;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 58px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $white;
+  text-transform: uppercase;
+
+  &:last-child {
+    text-transform: lowercase;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 38px;
+    line-height: 49px;
+  }
+}

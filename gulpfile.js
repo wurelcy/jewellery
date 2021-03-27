@@ -74,6 +74,7 @@ exports.sprite = sprite;
 const copy = () => {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
+    "source/slick/**/*.*",
   ], {
     base: "source"
   })
