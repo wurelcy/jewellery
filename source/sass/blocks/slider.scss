@@ -18,7 +18,6 @@
   list-style: none;
   padding: 0;
   margin: 0;
-
   position: relative;
 }
 
@@ -45,7 +44,8 @@
   outline: none;
 }
 
-.slider__item h3 {
+.slider__item h3,
+.catalog__item h3 {
   margin: 0;
   margin-top: 25px;
   margin-bottom: 15px;
@@ -54,7 +54,8 @@
   line-height: 21px;
 }
 
-.slider__item p {
+.slider__item p,
+.catalog__item p {
   margin: 0;
   font-weight: bold;
   font-size: 14px;

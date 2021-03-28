@@ -1,8 +1,8 @@
 .page-body {
-  height: 100%;
+  min-height: 100vh;
   margin: 0;
   display: grid;
-  grid-template-rows: min-content 1fr min-content;
+  grid-template-rows: auto 1fr auto;
   align-content: start;
   font-family: "Poppins", "Arial", sans-serif;
   color: $darkest;

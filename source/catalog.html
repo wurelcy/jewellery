@@ -21,7 +21,7 @@
           <label for="search" class="visually-hidden">What are looking for?</label>
           <input type="text" placeholder="Type here to search" id="search">
         </div>
-        <a class="header__logo" aria-label="Company logo">
+        <a href="index.html" class="header__logo" aria-label="Company logo">
           <svg aria-label="Logo" width="66" height="66">
             <use xlink:href="#icon-logo"></use>
           </svg>
@@ -66,188 +66,198 @@
         <a href="login.html" class="main-nav__login">Login</a>
       </nav>
     </header>
-    <main class="main-page">
-      <h1 class="visually-hidden">The main page of CH jewellery</h1>
+    <main class="catalog-page">
+      <h1 class="visually-hidden">Catalog page of CH jewellery</h1>
       <div class="top-wrapper">
         <div class="top-wrapper__overlay">
-          <p>Perfection</p>
-          <p>Made to be yours</p>
+          <p>All jewellerry</p>
+          <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
         </div>
       </div>
-      <section class="slider">
-        <h2 class="visually-hidden">New items</h2>
-          <div class="slider__title">
-            <p>New In</p>
-            <a href="catalog.html" class="slider__link">Shop Now</a>
-          </div>
-        <ul class="slider__list">
-          <li class="slider__item">
-            <a href="product.html">
-              <img src="img/purple-gemstone-necklace@1x.jpg" alt="" width="270" height="284">
-              <h3>Necklace with amethyst</h3>
-              <p>$145</p>
-            </a>
-          </li>
-          <li class="slider__item">
-            <a href="product.html">
-              <img src="img/layered-choker-necklace.jpg" alt="" width="270" height="284">
-              <h3>Layered сhoker</h3>
-              <p>$115</p>
-            </a>
-          </li>
-          <li class="slider__item">
-            <a href="product.html">
-              <img src="img/dainty-gold-necklace.jpg" alt="" width="270" height="284">
-              <h3>Gold chain</h3>
-              <p>$215</p>
-            </a>
-          </li>
-          <li class="slider__item">
-            <a href="product.html">
-              <img src="img/galaxy-earrings.jpg" alt="" width="270" height="284">
-              <h3>Galaxy earrings</h3>
-              <p>$95</p>
-            </a>
-          </li>
-          <li class="slider__item">
-            <a href="product.html">
-              <img src="img/blue-gemstone-pendant@1x.jpg" alt="" width="270" height="284">
-              <h3>Blue gemstone pendant</h3>
-              <p>$105</p>
-            </a>
-          </li>
-          <li class="slider__item">
-            <a href="product.html">
-              <img src="img/black-leather-choker-necklace@1x.jpg" alt="" width="270" height="284">
-              <h3>Black leather choker</h3>
-              <p>$85</p>
-            </a>
-          </li>
-          <li class="slider__item">
-            <a href="product.html">
-              <img src="img/threader-necklace-closeup@1x.jpg" alt="" width="270" height="284">
-              <h3>Threader necklace</h3>
-              <p>$115</p>
-            </a>
-          </li>
-          <li class="slider__item">
-            <a href="product.html">
-              <img src="img/double-pearl-earrings@1x.jpg" alt="" width="270" height="284">
-              <h3>Double pearl earrings</h3>
-              <p>$115</p>
-            </a>
-          </li>
-          <li class="slider__item">
-            <a href="product.html">
-              <img src="img/gold-layered-necklace@1x.jpg" alt="" width="270" height="284">
-              <h3>Gold layered necklace</h3>
-              <p>$155</p>
-            </a>
-          </li>
-          <li class="slider__item">
-            <a href="product.html">
-              <img src="img/black-choker-gold-bead@1x.jpg" alt="" width="270" height="284">
-              <h3>Choker with gold bead</h3>
-              <p>$55</p>
-            </a>
-          </li>
-          <li class="slider__item">
-            <a href="product.html">
-              <img src="img/origami-crane-necklace@1x.jpg" alt="" width="270" height="284">
-              <h3>Origami crane necklace</h3>
-              <p>$105</p>
-            </a>
-          </li>
-          <li class="slider__item">
-            <a href="product.html">
-              <img src="img/marble-earrings@1x.jpg" alt="" width="270" height="284">
-              <h3>Marble earrings</h3>
-              <p>$95</p>
-            </a>
-          </li>
-        </ul>
-      </section>
       <div class="container">
-        <section class="blog">
-          <h2>Blog</h2>
-          <a href="#" class="blog__link">Read All</a>
-          <div class="blog__column">
-            <article class="blog__article-small article">
-              <img src="img/blog-care@1x.jpg" alt="" width="285" height="300">
-              <div class="article__wrapper">
-                <p>September 30, 2019</p>
-                <p>How to care for your jewellery</p>
-                <a href="#" class="article__link">Read Article</a>
+        <section class="filters filters--closed">
+          <a href="#" class="filters__toggle-btn">Filter</a>
+          <form action="" method="POST">
+            <button class="filters__close-btn"></button>
+            <fieldset class="filters__block">
+              <h2>Product</h2>
+              <div class="filters__body">
+                <ul class="filters__list">
+                  <li class="filters__item">
+                    <input type="checkbox" class="visually-hidden" name="necklaces" id="necklaces" checked>
+                    <label for="necklaces">Necklaces</label>
+                  </li>
+                  <li class="filters__item">
+                    <input type="checkbox" class="visually-hidden" name="chokers" id="chokers" checked>
+                    <label for="chokers">Chokers</label>
+                  </li>
+                  <li class="filters__item">
+                    <input type="checkbox" class="visually-hidden" name="rings" id="rings">
+                    <label for="rings">Rings</label>
+                  </li>
+                  <li class="filters__item">
+                    <input type="checkbox" class="visually-hidden" name="earrings" id="earrings" checked>
+                    <label for="earrings">Earrings</label>
+                  </li>
+                </ul>
               </div>
-            </article>
-            <article class="blog__article-small article">
-              <img src="img/blog-power@1x.jpg" alt="" width="285" height="300">
-              <div class="article__wrapper">
-                <p>September 23, 2019</p>
-                <p>Power of crystals</p>
-                <a href="#" class="article__link">Read Article</a>
+            </fieldset>
+            <fieldset class="filters__block filters__block--closed">
+              <h2>Materials</h2>
+              <div class="filters__body">
+                <ul class="filters__list">
+                  <li class="filters__item">
+                    <input type="checkbox" class="visually-hidden" name="gold" id="gold">
+                    <label for="gold">Gold</label>
+                  </li>
+                  <li class="filters__item">
+                    <input type="checkbox" class="visually-hidden" name="silver" id="silver">
+                    <label for="silver">Silver</label>
+                  </li>
+                </ul>
               </div>
-            </article>
+            </fieldset>
+            <fieldset class="filters__block filters__block--closed">
+              <h2>Collection</h2>
+              <div class="filters__body">
+                <ul class="filters__list">
+                  <li class="filters__item">
+                    <input type="checkbox" class="visually-hidden" name="pink-flamingo" id="pink-flamingo">
+                    <label for="pink-flamingo">Pink flamingo</label>
+                  </li>
+                  <li class="filters__item">
+                    <input type="checkbox" class="visually-hidden" name="dreams" id="dreams">
+                    <label for="dreams">Dreams</label>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+            <fieldset class="filters__block">
+              <h2>Price</h2>
+              <div class="filters__body">
+                <div class="filters__scale">
+                  <div class="filters__bar"></div>
+                </div>
+                <div class="filters__toggle filters__toggle--min" tabindex="0"></div>
+                <div class="filters__toggle filters__toggle--max" tabindex="0"></div>
+              </div>
+            </fieldset>
+            <button type="submit" class="form__submit">
+              <span>Apply</span>
+            </button>
+            <button type="reset"  class="form__reset">
+              <span>Clear All</span>
+            </button>
+          </form>
+        </section>
+        <section class="catalog">
+          <ul class="catalog__list">
+            <li class="catalog__item">
+              <a href="product.html">
+                <img src="img/double-pearl-earrings@1x.jpg" alt="" width="270" height="284">
+                <h3>Double pearl earrings</h3>
+                <p>$115</p>
+              </a>
+            </li>
+            <li class="catalog__item">
+              <a href="product.html">
+                <img src="img/black-choker-gold-bead@1x.jpg" alt="" width="270" height="284">
+                <h3>Choker with gold bead</h3>
+                <p>$55</p>
+              </a>
+            </li>
+            <li class="catalog__item">
+              <a href="product.html">
+                <img src="img/gold-layered-necklace@1x.jpg" alt="" width="270" height="284">
+                <h3>Gold layered necklace</h3>
+                <p>$155</p>
+              </a>
+            </li>
+            <li class="catalog__item">
+              <a href="product.html">
+                <img src="img/blue-gemstone-pendant@1x.jpg" alt="" width="270" height="284">
+                <h3>Blue gemstone pendant</h3>
+                <p>$105</p>
+              </a>
+            </li>
+            <li class="catalog__item">
+              <a href="product.html">
+                <img src="img/boho-earrings@1x.jpg" alt="" width="270" height="284">
+                <h3>Boho earrings</h3>
+                <p>$75</p>
+              </a>
+            </li>
+            <li class="catalog__item">
+              <a href="product.html">
+                <img src="img/gold-bird-necklace@1x.jpg" alt="" width="270" height="284">
+                <h3>Gold bird necklace</h3>
+                <p>$155</p>
+              </a>
+            </li>
+            <li class="catalog__item">
+              <a href="product.html">
+                <img src="img/black-leather-choker-necklace@1x.jpg" alt="" width="270" height="284">
+                <h3>Black leather choker</h3>
+                <p>$85</p>
+              </a>
+            </li>
+            <li class="catalog__item">
+              <a href="product.html">
+                <img src="img/purple-gemstone-necklace@1x.jpg" alt="" width="270" height="284">
+                <h3>Necklace with amethyst</h3>
+                <p>$145</p>
+              </a>
+            </li>
+            <li class="catalog__item">
+              <a href="product.html">
+                <img src="img/elephant-earrings@1x.jpg" alt="" width="270" height="284">
+                <h3>Elephant earrings</h3>
+                <p>$95</p>
+              </a>
+            </li>
+            <li class="catalog__item">
+              <a href="product.html">
+                <img src="img/threader-necklace-closeup@1x.jpg" alt="" width="270" height="284">
+                <h3>Threader necklace</h3>
+                <p>$115</p>
+              </a>
+            </li>
+            <li class="catalog__item">
+              <a href="product.html">
+                <img src="img/origami-crane-necklace@1x.jpg" alt="" width="270" height="284">
+                <h3>Origami crane necklace</h3>
+                <p>$105</p>
+              </a>
+            </li>
+            <li class="catalog__item">
+              <a href="product.html">
+                <img src="img/marble-earrings@1x.jpg" alt="" width="270" height="284">
+                <h3>Marble earrings</h3>
+                <p>$95</p>
+              </a>
+            </li>
+          </ul>
+          <div class="catalog__nav">
+            <a href="#" class="catalog__link">Previous</a>
+            <ul class="catalog__pagination">
+              <li>
+                <a href="#" class="catalog__page catalog__page--active">1</a>
+              </li>
+              <li>
+                <a href="#" class="catalog__page">2</a>
+              </li>
+              <li>
+                <a href="#" class="catalog__page">3</a>
+              </li>
+              <li>
+                <a href="#" class="catalog__page">4</a>
+              </li>
+              <li>
+                <a href="#" class="catalog__page">5</a>
+              </li>
+            </ul>
+            <a href="#" class="catalog__link">Next</a>
           </div>
-          <article class="blog__article-large article">
-            <img src="img/blog-trends@1x.jpg" alt="" width="570" height="630">
-            <div class="article__wrapper">
-              <p>September 16, 2019</p>
-              <p>AW 19 trends</p>
-              <a href="#" class="article__link">Read Article</a>
-            </div>
-          </article>
-        </section>
-        <section class="faq">
-          <h2>Frequently asked questions</h2>
-          <ul class="faq__list">
-            <li class="faq__item">
-              <h3>What materials are the jewellery made of?</h3>
-              <div class="faq__item-body">
-                <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
-              </div>
-            </li>
-            <li class="faq__item faq__item--closed">
-              <h3>Which countries do you deliver to?</h3>
-              <div class="faq__item-body">
-                <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
-              </div>
-            </li>
-            <li class="faq__item faq__item--closed">
-              <h3>What are the payment methods?</h3>
-              <div class="faq__item-body">
-                <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
-              </div>
-            </li>
-            <li class="faq__item faq__item--closed">
-              <h3>Can I return the jewellery if it didn’t fit me?</h3>
-              <div class="faq__item-body">
-                <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
-              </div>
-            </li>
-          </ul>
-        </section>
-        <section class="inst">
-          <h2 class="visually-hidden">Our instagram</h2>
-          <p>@Chjewellery</p>
-          <a href="#" class="inst__link">Follow Us</a>
-          <ul class="inst__list">
-            <li class="inst__item">
-              <img src="img/inst-1@1x.jpg" alt="" width="230" height="230">
-              <img src="img/inst-2@1x.jpg" alt="" width="230" height="154">
-            </li>
-            <li class="inst__item">
-              <img src="img/inst-3@1x.jpg" alt="" width="400" height="240">
-            </li>
-            <li class="inst__item">
-              <img src="img/inst-4@1x.jpg" alt="" width="232" height="193">
-              <img src="img/inst-5@1x.jpg" alt="" width="218" height="191">
-            </li>
-            <li class="inst__item">
-              <img src="img/inst-6@1x.jpg" alt="" width="218" height="218">
-              <img src="img/inst-7@1x.jpg" alt="" width="232" height="166">
-            </li>
-          </ul>
         </section>
       </div>
     </main>
@@ -386,7 +396,6 @@
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

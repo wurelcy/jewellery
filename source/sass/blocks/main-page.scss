@@ -30,3 +30,20 @@
     line-height: 49px;
   }
 }
+
+@media (max-width: $tablet-width) {
+  .top-wrapper__overlay {
+    padding: 102px 0;
+  }
+
+  .top-wrapper p {
+    font-size: 34px;
+    line-height: 44px;
+    //letter-spacing: 0.03em;
+
+    &:last-child {
+      font-size: 22px;
+      line-height: 29px;
+    }
+  }
+}
