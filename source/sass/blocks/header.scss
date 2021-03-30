@@ -7,7 +7,7 @@
   display: flex;
   width: 86%;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 14px;
   line-height: 21px;
 }
@@ -26,16 +26,25 @@
 
 .header__search svg {
   vertical-align: middle;
-  margin-right: 15px;
+  margin-right: 11px;
+  margin-left: 2px;
   fill: $darkest;
 }
 
 .header__search input {
+  margin-top: 14px;
   border: 0;
 }
 
 .header__login {
-  margin-right: 35px;
+  margin-top: 12px;
+  margin-right: 36px;
+  margin-left: 86px;
+}
+
+.header__cart {
+  margin-top: 12px;
+  margin-right: 5px;
 }
 
 .header__cart svg {
@@ -44,9 +53,15 @@
 
 @media (max-width: $tablet-width) {
   .header__wrapper {
-    align-items: center;
     flex-wrap: wrap;
-    width: 86%;
+    width: 88%;
+    padding-bottom: 15px;
+  }
+
+  .header__search input {
+    margin-top: 0;
+    width: 600px;
+    outline: none;
   }
 
   .header__toggle {
@@ -59,6 +74,7 @@
     height: 16px;
     position: relative;
     outline: none;
+    margin-top: 25px;
   }
 
   .header__toggle span {
@@ -80,7 +96,7 @@
     }
 
     &::before {
-      transform: translate(0, 0px);
+      transform: translate(0, -1px);
     }
 
     &::after {
@@ -91,6 +107,12 @@
   .header__search,
   .header__login {
     display: none;
+  }
+
+  .header__cart {
+    margin-right: 0;
+    margin-left: 5px;
+    margin-top: 25px;
   }
 
   .header__cart span {
@@ -173,6 +195,23 @@
 }
 
 @media (max-width: $mobile-width-only) {
+  .header {
+    padding-top: 20px;
+  }
+
+  .header__wrapper {
+    width: 91%;
+    padding-bottom: 5px;
+  }
+
+  .header__cart {
+    margin-top: 18px;
+  }
+
+  .header__toggle {
+    margin-top: 18px;
+  }
+
   .header__logo svg {
     width: 52px;
     height: 52px;

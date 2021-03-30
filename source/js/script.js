@@ -19,10 +19,22 @@ $(document).ready(function () {
             infinite: true,
             dots: true
           }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: true,
+            dots: true
+          }
         }
       ]
     });
   }
+
+  let minWidth = 1200;
 
   let arrowPrev = document.querySelector('.slick-prev');
   let arrowNext = document.querySelector('.slick-next');
@@ -45,6 +57,16 @@ $(document).ready(function () {
     });
   }
 
+  let rez = (minWidth) => {
+    if (window.clientWidth > minWidth) {
+      document.querySelectorAll('.slick-slide').forEach((el) => {
+        el.style.width = '270px';
+      });
+    }
+  };
+
+  rez(minWidth);
+
   if (dotsList) {
     dotsList.style.display = 'flex';
   }
@@ -58,6 +80,12 @@ $(document).ready(function () {
     deleteText(arrowNext);
     arrowPrev.innerHTML = '<svg width="29" height="9"><use xlink:href="#icon-arrow-left"></use></svg>';
     arrowNext.innerHTML = '<svg width="29" height="9"><use xlink:href="#icon-arrow-right"></use></svg>';
+
+    if (window.clientWidth < 768) {
+      arrows.forEach((arrow) => {
+        arrow.style.display = 'none';
+      });
+    }
   }
 
   /* Accordion */

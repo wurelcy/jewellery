@@ -36,6 +36,20 @@
     display: flex;
     flex-direction: column;
   }
+  
+  .catalog-page .top-wrapper__overlay {
+    padding: 102px 0;
+  }
+
+  .catalog-page .top-wrapper p {
+    font-size: 34px;
+    line-height: 44px;
+
+    &:last-child {
+      font-size: 22px;
+      line-height: 29px;
+    }
+  }
 }
 
 @media (max-width: $mobile-width-only) {

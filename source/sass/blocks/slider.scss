@@ -1,12 +1,13 @@
 .slider {
-  max-width: 1170px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 130px 0;
+  padding-top: 120px;
+  padding-bottom: 126px;
 }
 
 .slider__title p {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 24px;
   font-family: $cormorant;
   font-weight: bold;
   font-size: 34px;
@@ -17,7 +18,8 @@
 .slider__list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  //margin-left: 15px;
   position: relative;
 }
 
@@ -35,20 +37,28 @@
 
 .slider__item {
   text-align: center;
-  max-width: 270px;
+  //width: 270px;
   margin: 0 15px;
-  margin-bottom: 60px;
+  margin: 0 15px;
+  margin-bottom: 54px;
 }
 
 .slider__item a {
   outline: none;
 }
 
+.slider__item img {
+  width: 270px;
+  height: 284px;
+  object-fit: cover;
+}
+
+
 .slider__item h3,
 .catalog__item h3 {
   margin: 0;
-  margin-top: 25px;
-  margin-bottom: 15px;
+  margin-top: 20px;
+  margin-bottom: 7px;
   font-weight: 500;
   font-size: 16px;
   line-height: 21px;
@@ -72,28 +82,30 @@
   background-color: transparent;
   border: 0;
   position: absolute;
-  top: -100px;
+  top: -113px;
   padding: 0;
 }
 
 .slick-arrow svg {
   stroke: $brown;
-  width: 29px;
+  width: 35px;
   height: auto;
 }
 
 .slick-next {
-  right: 10px;
+  top: -109px;
+  right: 11px;
 }
 
 .slick-prev {
-  left: 10px;
+  left: -4px;
 }
 
 .slick-dots {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-left: 15px;
   justify-content: center;
 }
 
@@ -101,9 +113,10 @@
   border: 0;
   background-color: transparent;
   padding: 0;
-  margin-right: 15px;
+  margin-right: 13px;
   outline: none;
   color: $grey;
+  cursor: pointer;
 }
 
 .slick-active button {
@@ -112,21 +125,31 @@
 
 @media (max-width: $tablet-width) {
   .slider {
-    padding: 80px 0;
+    max-width: 768px;
+    padding: 70px 0;
+    padding-bottom: 65px;
+  }
+
+  .slider__title p {
+    margin-bottom: 20px;
+  }
+
+  .slider__link {
+    margin-bottom: 50px;
   }
 
   .slider__list {
     margin: 0 auto;
-    max-width: 670px;
+    max-width: 708px;
   }
 
   .slider__item {
     max-width: 324px;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
 
   .slider__item img {
-    width: 100%;
+    width: 324px;
     height: 340px;
     object-fit: cover;
   }
@@ -135,11 +158,30 @@
     max-width: 82px;
     padding-bottom: 3px;
   }
+
+  .slick-arrow {
+    top: -100px;
+  }
+
+  .slick-arrow svg {
+    width: 36px;
+    height: 25px;
+  }
+
+  .slick-next {
+    top: -100px;
+    right: 13px;
+  }
+
+  .slick-prev {
+    left: 15px;
+  }
 }
 
 @media (max-width: $mobile-width-only) {
   .slider {
-    padding: 70px 0;
+    padding: 60px 0;
+    padding-bottom: 56px;
   }
 
   .slider__list {
@@ -148,7 +190,7 @@
 
   .slider__item {
     width: 130px;
-    margin-bottom: 40px;
+    margin-bottom: 0;
   }
 
   .slider__item img {
@@ -158,11 +200,17 @@
 
   .slider__link {
     max-width: 82px;
+    margin-bottom: 40px;
     padding-bottom: 3px;
   }
 
   .slider__item h3 {
-    margin-top: 20px;
+    margin-top: 18px;
+    margin-bottom: 5px;
+  }
+
+  .slick-arrow {
+    display: none;
   }
 
   .slick-dots {
@@ -170,20 +218,29 @@
     justify-content: flex-start;
   }
 
-  .slick-dots::after {
-    content: " of 6";
-    position: absolute;
-    left: 149px;
+  .slick-dots {
+    &::before {
+      content: "of";
+      position: absolute;
+      left: 136px;
+    }
+
+    &::after {
+      content: "6";
+      position: absolute;
+      left: 160px;
+    }
   }
+
 
   .slick-dots li {
     display: none;
-    margin-left: 135px;
+    margin-left: 120px;
   }
 
   .slick-dots,
   .slider--card .slick-dots {
-    margin-top: 30px;
+    margin-top: 32px;
   }
 
   .slick-dots .slick-active {

@@ -1,6 +1,15 @@
 .info {
-  margin-right: 67px;
+  margin-right: 72px;
 }
+
+.info .footer__item {
+  margin-bottom: 22px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 
 @media (max-width: 1160px) {
   .info {
@@ -17,6 +26,6 @@
 @media (max-width: $mobile-width-only) {
   .info {
     margin-right: 0;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
   }
 }

@@ -3,20 +3,20 @@
 }
 
 .social__link svg {
-  margin-right: 15px;
-  vertical-align: middle;
+  margin-right: 13px;
 }
 
 @media (max-width: $tablet-width) {
   .social {
-    margin-left: 87px;
+    margin-left: 72px;
   }
 }
 
 @media (max-width: $mobile-width-only) {
   .social {
     margin-left: 0;
-    margin-top: 50px;
+    margin-right: 10px;
+    margin-top: 40px;
   }
 
   .social span {
@@ -31,5 +31,11 @@
     width: 20px;
     height: 21px;
     margin-right: 30px;
+  }
+
+  .social .footer__item {
+    &:first-child svg {
+       width: 12px;
+    }
   }
 }
