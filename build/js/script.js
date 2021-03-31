@@ -43,7 +43,8 @@ $(document).ready(function () {
   let header = document.querySelector('.header');
   let headerToggle = document.querySelector('.header__toggle');
 
-  const accordionBlocks = document.querySelectorAll('.faq__item');
+  const faqBlocks = document.querySelectorAll('.faq__item');
+  const filterBlocks = document.querySelectorAll('.filters__block');
 
   if (header) {
     headerToggle.addEventListener('click', () => {
@@ -90,34 +91,42 @@ $(document).ready(function () {
 
   /* Accordion */
 
-  if (accordionBlocks) {
-    let activePanel;
-
+  let activePanel;
+  let renderAccordion = (accordionBlocks, accordionBody, accordionClosed) => {
     accordionBlocks.forEach((block) => {
-      block.classList.add('faq__item--closed');
-      block.querySelector('.faq__item-body').style.maxHeight = '0px';
+      block.classList.add(accordionClosed);
+      block.querySelector('.' + accordionBody).style.maxHeight = '0px';
 
       block.addEventListener('click', function() {
-        if (!block.classList.contains('faq__item--closed')) {
+        if (!block.classList.contains(accordionClosed)) {
           activePanel = block;
         }
 
-        if (block.classList.contains('faq__item--closed')) {
+        if (block.classList.contains(accordionClosed)) {
           if (activePanel) {
-            activePanel.classList.add('faq__item--closed');
-            activePanel.querySelector('.faq__item-body').style.maxHeight = '0px';
+            activePanel.classList.add(accordionClosed);
+            activePanel.querySelector('.' + accordionBody).style.maxHeight = '0px';
           }
 
-          let insideElHeight = block.querySelector('.faq__item-body > *').clientHeight;
+          let insideElHeight = block.querySelector('.'+ accordionBody + ' > *').clientHeight;
 
-          block.classList.remove('faq__item--closed');
-          block.querySelector('.faq__item-body').style.maxHeight = insideElHeight + 'px';
+          block.classList.remove(accordionClosed);
+          block.querySelector('.' + accordionBody).style.maxHeight = insideElHeight + 'px';
           activePanel = block;
         } else {
-          block.querySelector('.faq__item-body').style.maxHeight = '0px';
-          block.classList.add('faq__item--closed');
+          block.querySelector('.' + accordionBody).style.maxHeight = '0px';
+          block.classList.add(accordionClosed);
         }
       });
     });
+  };
+
+
+  if (faqBlocks) {
+    renderAccordion(faqBlocks, 'faq__item-body', 'faq__item--closed');
   }
+
+  if (filterBlocks) {
+    renderAccordion(filterBlocks, 'filters__body', 'filters__block--closed');
+  }.
 });

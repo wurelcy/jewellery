@@ -9,6 +9,10 @@
   display: none;
 }
 
+.filters__block {
+  background-color: $white;
+}
+
 .filters fieldset {
   display: block;
   border: 0;
@@ -25,22 +29,22 @@
   &::after {
     position: absolute;
     content: "";
-    width: 15px;
+    width: 16px;
     height: 8px;
     background-image: url("../img/icon-arrow.svg");
-    right: 25px;
-    top: 35px;
+    right: 24px;
+    top: 30px;
     transition: transform 0.6s ease-in-out;
   }
 }
 
-.filters h2 {
+.filters h3 {
   font-weight: 500;
   padding: 0;
-  padding-top: 28px;
+  padding-top: 24px;
   padding-left: 25px;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 22px;
   font-size: 16px;
   line-height: 21px;
 }
@@ -49,13 +53,12 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-left: 25px;
-  padding-bottom: 29px;
-
+  padding-left: 34px;
+  padding-bottom: 26px;
 }
 
 .filters__item {
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 
   &:last-child {
     margin-bottom: 0;
@@ -73,9 +76,9 @@
     content: "";
     width: 15px;
     height: 15px;
-    border: 2px solid $brown;
+    border: 1px solid $brown;
     left: 0;
-    top: 2px;
+    top: 3px;
   }
 
   &:hover + label::before,
@@ -92,7 +95,7 @@
     position: absolute;
     content: "";
     left: 0;
-    top: 2px;
+    top: 3px;
     height: 15px;
     width: 15px;
     background-color: $brown;
@@ -106,7 +109,8 @@
 .filters__scale {
   width: 200px;
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-top: 25px;
+  margin-bottom: 48px;
   background-color: $light;
   height: 1px;
   position: relative;
@@ -126,12 +130,14 @@
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  top: 71px;
+  top: 62px;
   cursor: pointer;
+  transition: max-height 0.6s ease-in;
 }
 
 .filters__toggle--min {
-  left: 75px;
+  left: 70px;
+  transition: max-height 0.6s ease-in;
 
   &::after {
     position: absolute;
@@ -140,13 +146,14 @@
     font-size: 14px;
     line-height: 18px;
     width: 34px;
-    top: 20px;
-    left: -9px;
+    top: 22px;
+    left: -8px;
   }
 }
 
 .filters__toggle--max {
-  right: 65px;
+  right: 60px;
+  transition: max-height 0.4s ease-in;
 
   &::after {
     position: absolute;
@@ -155,22 +162,38 @@
     font-size: 14px;
     line-height: 18px;
     width: 38px;
-    top: 20px;
-    left: -12px;
+    top: 22px;
+    left: -8px;
   }
 }
 
 .filters__block--closed {
   &::after {
     transform: rotate(180deg);
-    transition: transform 0.6s ease-in-out;
+    transition: transform 0.4s ease-in-out;
   }
 }
 
-.filters__block--closed .filters__range,
+.filters__body {
+  transition: max-height 0.4s ease-in;
+}
+
 .filters__block--closed .filters__body {
+  overflow: hidden;
+  transition: max-height 0.4s ease-in;
+}
+
+.filters__block--closed .filters__toggle {
   max-height: 0;
   overflow: hidden;
+}
+
+.filters__block--closed .filters__toggle--max,
+.filters__block--closed .filters__toggle--min {
+  &::after {
+    overflow: hidden;
+    transition: max-height 0.6s ease-in;
+  }
 }
 
 .form__submit,
@@ -182,7 +205,7 @@
   line-height: 21px;
   font-weight: 500;
   text-align: center;
-  padding: 28px 0;
+  padding: 23px 0;
   cursor: pointer;
 }
 
@@ -222,7 +245,7 @@
     text-align: center;
     background-color: $brown;
     color: $white;
-    padding: 28px 0;
+    padding: 25px 0;
   }
 
   .form__submit,

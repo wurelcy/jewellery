@@ -36,15 +36,28 @@
   border: 0;
 }
 
+.header--catalog input {
+  margin-top: 24px;
+}
+
 .header__login {
   margin-top: 12px;
   margin-right: 36px;
   margin-left: 86px;
 }
 
+
 .header__cart {
   margin-top: 12px;
   margin-right: 5px;
+}
+
+.header--catalog .header__cart  {
+  margin-top: 24px;
+}
+
+.header--catalog .header__login  {
+  margin-top: 24px;
 }
 
 .header__cart svg {
@@ -206,6 +219,16 @@
 
   .header__cart {
     margin-top: 18px;
+  }
+
+  .header--catalog .header__cart {
+    margin-top: 15px;
+  }
+
+  .header--catalog .header__cart svg {
+
+    width: 20px;
+    height: 20px;
   }
 
   .header__toggle {
