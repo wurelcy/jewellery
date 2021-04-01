@@ -15,6 +15,11 @@
   background-image: url("../img/login-bg@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/login-bg@2x.jpg");
+    background-size: 100%;
+  }
 }
 
 .login-popup__upper-wrapper a {

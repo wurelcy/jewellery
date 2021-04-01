@@ -1,8 +1,13 @@
 .top-wrapper {
-  background-image: url('../img/bg-main@1x.jpg');
+  background-image: $brown url('../img/bg-main@1x.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  @media (min-resolution: 2dppx) {
+    background: $brown url("../img/bg-main@2x.png");
+    background-size: 100%;
+  }
 }
 
 .top-wrapper__overlay {
