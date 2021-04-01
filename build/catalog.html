@@ -349,6 +349,31 @@
       </div>
     </footer>
 
+    <section class="login-popup login-popup--closed">
+      <div class="login-popup__upper-wrapper">
+        <a href="index.html">
+        </a>
+      </div>
+      <h2 class="visually-hidden">Log In form</h2>
+      <p>Log In</p>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <div class="login-popup__email">
+          <label for="email-popup" class="visually-hidden">Имя</label>
+          <input type="email" placeholder="Your E-mail" name="user-email-popup" id="email-popup" required>
+        </div>
+        <div class="login-popup__password">
+          <label for="password-popup" class="visually-hidden">Password</label>
+          <input id="password-popup" type="password" placeholder="Password" name="user-password-popup" minlength="6" required>
+        </div>
+        <a href="#" class="login-popup__forget">Forgot your password?</a>
+        <button type="submit" class="login-popup__submit">Log In</button>
+        <div class="login-popup__registration">
+          <p>Don’t have an account?</p>
+          <a href="#">Sign up</a>
+        </div>
+      </form>
+    </section>
+
     <svg width="0" height="0" style="display: none;">
       <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 10" id="icon-arrow">
         <path d="M16 9L8.5 1 1 9" stroke="#A87B62"></path>

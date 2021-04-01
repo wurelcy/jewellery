@@ -1,0 +1,192 @@
+.login-popup {
+  position: fixed;
+  width: 430px;
+  min-height: 586px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $light;
+}
+
+.login-popup__upper-wrapper {
+  width: 100%;
+  min-height: 138px;
+  padding-top: 20px;
+  background-image: url("../img/login-bg@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login-popup__upper-wrapper a {
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: 20px;
+  position: relative;
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: $darkest;
+    height: 3px;
+    width: 27px;
+    top: 9px;
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+}
+
+.login-popup p {
+  margin: 0;
+  margin-top: 60px;
+  margin-bottom: 23px;
+  font-family: $cormorant;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 44px;
+  text-align: center;
+}
+
+.login-popup form {
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+  margin: 0 auto;
+}
+
+.login-popup input {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid $darkest;
+  padding-bottom: 4px;
+  height: 30px;
+
+  &::placeholder {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+.login-popup__email {
+  margin-bottom: 40px;
+}
+
+.login-popup__password {
+  margin-bottom: 5px;
+}
+
+.login-popup__forget {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  margin-left: auto;
+  color: $grey;
+}
+
+.login-popup__submit {
+  border: 0;
+  margin-top: 45px;
+  padding: 24px;
+  background-color: $brown;
+  color: $white;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.login-popup__registration {
+  display: flex;
+  justify-content: center;
+  margin-top: 17px;
+}
+
+.login-popup__registration p {
+  margin: 0;
+  margin-right: 5px;
+  font-family: $poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $grey;
+}
+
+.login-popup__registration a {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $darkest;
+}
+
+.login-popup--closed {
+  display: none;
+}
+
+.login-popup--opened {
+  display: block;
+  z-index: 3;
+}
+
+@media (max-width: $tablet-width) {
+  .login-popup {
+    width: 442px;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .login-popup {
+    width: 270px;
+    min-height: 470px;
+  }
+
+  .login-popup p {
+    margin-top: 45px;
+    margin-bottom: 19px;
+    font-size: 24px;
+    line-height: 31px;
+  }
+
+  .login-popup__registration p {
+    margin: 0;
+    margin-right: 5px;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .login-popup form {
+    width: 240px;
+  }
+
+  .login-popup__email {
+    margin-bottom: 35px;
+  }
+
+  .login-popup__submit {
+    margin-top: 30px;
+  }
+
+  .login-popup__upper-wrapper {
+    min-height: 84px;
+    padding-top: 15px;
+  }
+
+  .login-popup__upper-wrapper a {
+    margin-right: 15px;
+
+    &::after,
+    &::before {
+    width: 25px;
+    }
+  }
+}

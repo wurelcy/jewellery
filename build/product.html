@@ -65,6 +65,7 @@
         </ul>
         <a href="login.html" class="main-nav__login">Login</a>
       </nav>
+      <div class="overlay overlay--hidden"></div>
     </header>
     <main class="product-page">
       <h1 class="visually-hidden">The main page of CH jewellery</h1>
@@ -105,7 +106,7 @@
                 <span>18” / 20”</span>
               </li>
             </ul>
-            <a href="" class="product__add-to-cart">Add to cart</a>
+            <a href="cart.html" class="product__add-to-cart">Add to cart</a>
             <ul class="product__conditions">
               <li class="product__condition">
                 <a href="">14 Day Returns</a>
@@ -301,6 +302,57 @@
         </section>
       </div>
     </footer>
+
+    <section class="login-popup login-popup--closed">
+      <div class="login-popup__upper-wrapper">
+        <a href="index.html">
+        </a>
+      </div>
+      <h2 class="visually-hidden">Log In form</h2>
+      <p>Log In</p>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <div class="login-popup__email">
+          <label for="email-popup" class="visually-hidden">Имя</label>
+          <input type="email" placeholder="Your E-mail" name="user-email-popup" id="email-popup" required>
+        </div>
+        <div class="login-popup__password">
+          <label for="password-popup" class="visually-hidden">Password</label>
+          <input id="password-popup" type="password" placeholder="Password" name="user-password-popup" minlength="6" required>
+        </div>
+        <a href="#" class="login-popup__forget">Forgot your password?</a>
+        <button type="submit" class="login-popup__submit">Log In</button>
+        <div class="login-popup__registration">
+          <p>Don’t have an account?</p>
+          <a href="#">Sign up</a>
+        </div>
+      </form>
+    </section>
+
+    <section class="cart-popup cart-popup--closed">
+      <a href="index.html" class="cart-popup__close"></a>
+      <h2 class="visually-hidden">Added to cart popup</h2>
+      <p>The item was added to your cart</p>
+      <div class="cart-popup__item">
+        <img src="img/necklace-detail@1x.jpg" alt="" width="84" height="79">
+        <div class="cart-popup__details">
+          <p>Gold Necklace</p>
+          <p>$ <span>115</span></p>
+        </div>
+        <div class="cart-popup__quanity">
+          <button class="cart-popup__increase"></button>
+          <span>1</span>
+          <button class="cart-popup__derease"></button>
+        </div>
+      </div>
+      <div class="cart-popup__summary">
+        <p>You have <span>1</span> item in the cart</p>
+        <p>Cart subtotal: $ <span>115</span></p>
+      </div>
+      <div class="cart-popup__links">
+        <a href="product.html" class="cart-popup__continue">Continue shopping</a>
+        <a href="#" class="cart-popup__to-cart">Checkout</a>
+      </div>
+    </section>
 
     <svg width="0" height="0" style="display: none;">
       <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 10" id="icon-arrow">

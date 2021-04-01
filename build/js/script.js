@@ -43,8 +43,22 @@ $(document).ready(function () {
   let header = document.querySelector('.header');
   let headerToggle = document.querySelector('.header__toggle');
 
+  let activePanel;
   const faqBlocks = document.querySelectorAll('.faq__item');
   const filterBlocks = document.querySelectorAll('.filters__block');
+
+  const loginCloseButton = document.querySelector('.login-popup__upper-wrapper a');
+  const loginOpenButton = document.querySelector('.header__login');
+  const loginPopup = document.querySelector('.login-popup');
+  const loginSubmit = document.querySelector('.login-popup__submit');
+  const loginEmailInput = document.querySelector('#email-popup');
+  const loginPasswordInput = document.querySelector('#password-popup');
+  const cartCloseButton = document.querySelector('.cart-popup__close');
+  const cartOpenButton = document.querySelector('.product__add-to-cart');
+  const cartPopup = document.querySelector('.cart-popup');
+  const overlay = document.querySelector('.overlay');
+
+  /* Menu */
 
   if (header) {
     headerToggle.addEventListener('click', () => {
@@ -57,6 +71,8 @@ $(document).ready(function () {
       }
     });
   }
+
+  /* Slider Settings*/
 
   let rez = (minWidth) => {
     if (window.clientWidth > minWidth) {
@@ -89,9 +105,73 @@ $(document).ready(function () {
     }
   }
 
+  /* Popup */
+
+  let openPopup = (openClass, closeClass, popup) => {
+    popup.classList.remove(closeClass);
+    popup.classList.add(openClass);
+    overlay.classList.remove('overlay--hidden');
+  };
+
+  let closePopup = (openClass, closeClass, popup) => {
+    popup.classList.add(closeClass);
+    popup.classList.remove(openClass);
+    overlay.classList.add('overlay--hidden');
+  };
+
+  /* Login Form */
+
+  if (loginPopup) {
+    loginOpenButton.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      openPopup('login-popup--opened', 'login-popup--closed', loginPopup);
+    });
+
+    loginCloseButton.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      closePopup('login-popup--opened', 'login-popup--closed', loginPopup);
+    });
+
+    window.addEventListener('keydown', (evt) => {
+      if (evt.key === 'Escape') {
+        closePopup('login-popup--opened', 'login-popup--closed', loginPopup);
+      }
+    });
+
+    loginSubmit.addEventListener('click', (evt) => {
+      if (loginEmailInput.value.valueMissing && loginPasswordInput.value.valueMissing) {
+        evt.preventDefault();
+      } else if ((loginEmailInput.value !== "") && (loginPasswordInput.value !== "")) {
+        evt.preventDefault();
+        localStorage.setItem('loginUserEmail', loginEmailInput.value);
+        localStorage.setItem('loginUserPassword', loginPasswordInput.value);
+        closePopup('login-popup--opened', 'login-popup--closed', loginPopup);
+      }
+    });
+  }
+
+  /* Cart Popup*/
+
+  if (cartPopup) {
+    cartOpenButton.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      openPopup('cart-popup--opened', 'cart-popup--closed', cartPopup);
+    });
+
+    cartCloseButton.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      closePopup('cart-popup--opened', 'cart-popup--closed', cartPopup);
+    });
+
+    window.addEventListener('keydown', (evt) => {
+      if (evt.key === 'Escape') {
+        closePopup('cart-popup--opened', 'cart-popup--closed', cartPopup);
+      }
+    });
+  }
+
   /* Accordion */
 
-  let activePanel;
   let renderAccordion = (accordionBlocks, accordionBody, accordionClosed) => {
     accordionBlocks.forEach((block) => {
       block.classList.add(accordionClosed);
@@ -128,5 +208,5 @@ $(document).ready(function () {
 
   if (filterBlocks) {
     renderAccordion(filterBlocks, 'filters__body', 'filters__block--closed');
-  }.
+  }
 });
