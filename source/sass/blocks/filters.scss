@@ -1,4 +1,5 @@
-.filters form {
+.filters form,
+.filters--nojs form {
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
@@ -315,8 +316,16 @@
     display: none;
   }
 
+  .filters--nojs form {
+    display: block;
+  }
+
   .filters--closed .filters__toggle-btn {
     display: block;
+  }
+
+  .filters--nojs .filters__toggle-btn {
+    display: none;
   }
 }
 

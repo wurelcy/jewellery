@@ -46,6 +46,9 @@ $(document).ready(function () {
   let activePanel;
   const faqBlocks = document.querySelectorAll('.faq__item');
   const filterBlocks = document.querySelectorAll('.filters__block');
+  const filter = document.querySelector('.filters');
+  const filterToggle = document.querySelector('.filters__toggle-btn');
+  const filterCloseButton = document.querySelector('.filters__close-btn');
 
   const loginCloseButton = document.querySelector('.login-popup__upper-wrapper a');
   const loginOpenButton = document.querySelector('.header__login');
@@ -61,6 +64,8 @@ $(document).ready(function () {
   /* Menu */
 
   if (header) {
+    header.classList.remove('header--nojs');
+
     headerToggle.addEventListener('click', () => {
       if (header.classList.contains('header--closed')) {
         header.classList.add('header--opened');
@@ -103,6 +108,23 @@ $(document).ready(function () {
         arrow.style.display = 'none';
       });
     }
+  }
+
+  /* Filter */
+
+  if (filter) {
+    filter.classList.remove('filters--nojs');
+
+    filterToggle.addEventListener('click', () => {
+      filter.classList.remove('filters--closed');
+      filter.classList.add('filters--opened');
+    });
+
+    filterCloseButton.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      filter.classList.add('filters--closed');
+      filter.classList.remove('filters--opened');
+    });
   }
 
   /* Popup */
@@ -200,7 +222,6 @@ $(document).ready(function () {
       });
     });
   };
-
 
   if (faqBlocks) {
     renderAccordion(faqBlocks, 'faq__item-body', 'faq__item--closed');
