@@ -18,6 +18,16 @@
 
 .header__logo {
   margin: 0 auto;
+  cursor: pointer;
+
+  &:hover svg,
+  &:focus svg {
+    fill: rgba($brown, 0.5);
+  }
+
+  &:active svg {
+    fill: $grey;
+  }
 }
 
 .header__logo svg {
@@ -34,9 +44,11 @@
 .header__search input {
   margin-top: 14px;
   border: 0;
+  outline: none;
 }
 
-.header--catalog input {
+.header--catalog input,
+.header--product input {
   margin-top: 24px;
 }
 
@@ -44,19 +56,39 @@
   margin-top: 12px;
   margin-right: 36px;
   margin-left: 86px;
+
+  &:hover,
+  &:focus {
+    color: $brown;
+  }
+
+  &:active {
+    color: $grey;
+  }
 }
 
 
 .header__cart {
   margin-top: 12px;
   margin-right: 5px;
+
+  &:hover,
+  &:focus {
+    color: $brown;
+  }
+
+  &:active {
+    color: $grey;
+  }
 }
 
-.header--catalog .header__cart  {
+.header--catalog .header__cart,
+.header--product .header__cart {
   margin-top: 24px;
 }
 
-.header--catalog .header__login  {
+.header--catalog .header__login,
+.header--product .header__login {
   margin-top: 24px;
 }
 
@@ -221,12 +253,13 @@
     margin-top: 18px;
   }
 
-  .header--catalog .header__cart {
+  .header--catalog .header__cart,
+  .header--product .header__cart {
     margin-top: 15px;
   }
 
-  .header--catalog .header__cart svg {
-
+  .header--catalog .header__cart svg,
+  .header--product .header__cart svg {
     width: 20px;
     height: 20px;
   }

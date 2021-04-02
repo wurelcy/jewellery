@@ -46,20 +46,32 @@
   display: flex;
 }
 
+.catalog__page {
+  color: $grey;
+}
+
+.catalog__link,
+.catalog__page {
+  &:hover,
+  &:focus {
+    color: $brown;
+  }
+
+  &:active {
+    color: $grey;
+  }
+}
+
+.catalog__page--active {
+  color: $darkest;
+}
+
 .catalog__pagination li {
   margin-right: 14px;
 
   &:last-child {
     margin-right: 0;
   }
-}
-
-.catalog__page {
-  color: $grey;
-}
-
-.catalog__page--active {
-  color: $darkest;
 }
 
 @media (max-width: 1240px) {
@@ -71,6 +83,7 @@
 
 @media (max-width: $tablet-width) {
   .catalog__list {
+    margin-top: 10px;
     grid-template-columns: 206px 206px 206px;
   }
 

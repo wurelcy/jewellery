@@ -47,6 +47,18 @@
   &::before {
     transform: rotate(-45deg);
   }
+
+  &:hover,
+  &:focus {
+    &::after,
+    &::before {
+      background-color: $brown;
+    }
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
 }
 
 .login-popup p {
@@ -74,11 +86,21 @@
   border-bottom: 1px solid $darkest;
   padding-bottom: 4px;
   height: 30px;
+  outline: none;
 
   &::placeholder {
     font-weight: 500;
     font-size: 14px;
     line-height: 21px;
+  }
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid $brown;
+  }
+
+  &:active {
+    opacity: 0.4;
   }
 }
 
@@ -96,6 +118,15 @@
   line-height: 18px;
   margin-left: auto;
   color: $grey;
+
+  &:hover,
+  &:focus {
+    color: $brown;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
 }
 
 .login-popup__submit {
@@ -107,6 +138,18 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 21px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: rgba($brown, 0.8);
+  }
+
+  &:active {
+    background-color: $brown;
+    color: $grey;
+    opacity: 0.6;
+  }
 }
 
 .login-popup__registration {
@@ -132,6 +175,15 @@
   font-size: 14px;
   line-height: 21px;
   color: $darkest;
+
+  &:hover,
+  &:focus {
+    color: $brown;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
 }
 
 .login-popup--closed {
@@ -191,7 +243,7 @@
 
     &::after,
     &::before {
-    width: 25px;
+      width: 25px;
     }
   }
 }

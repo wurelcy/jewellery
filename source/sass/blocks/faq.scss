@@ -28,6 +28,7 @@
   padding-left: 43px;
   border-bottom: 1px solid $brown;
   position: relative;
+  cursor: pointer;
 
   &::after {
     position: absolute;
@@ -109,7 +110,7 @@
 
   .faq__item p {
     max-width: 547px;
-    margin-left: 0px;
+    margin-left: 0;
   }
 
   .faq__item--closed h3 {

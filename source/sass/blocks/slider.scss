@@ -27,7 +27,6 @@
   list-style: none;
   padding: 0;
   margin: 0 auto;
-  //margin-left: 15px;
   position: relative;
 }
 
@@ -41,6 +40,15 @@
   text-align: center;
   max-width: 87px;
   border-bottom: 1px solid $brown;
+
+  &:hover,
+  &:focus {
+    color: $brown;
+  }
+
+  &:active {
+    color: $grey;
+  }
 }
 
 .product-page .slider__link {
@@ -51,8 +59,6 @@
 
 .slider__item {
   text-align: center;
-  //width: 270px;
-  margin: 0 15px;
   margin: 0 15px;
   margin-bottom: 54px;
 }
@@ -98,6 +104,15 @@
   position: absolute;
   top: -113px;
   padding: 0;
+
+  &:hover svg,
+  &:focus svg {
+    stroke: rgba($brown, 0.5);
+  }
+
+  &:active svg {
+    stroke: $grey;
+  }
 }
 
 .slick-arrow svg {
@@ -115,7 +130,7 @@
   left: -4px;
 }
 
- .slick-prev {
+.catalog__item .slick-prev {
   top: -109px;
   left: 10px;
 }
@@ -136,10 +151,19 @@
   outline: none;
   color: $grey;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $brown;
+  }
+
+  &:active {
+    color: $grey;
+  }
 }
 
 .product-page .slick-dots button {
-  filter: drop-shadow(0px 4px 4px rgba($black, 0.25));
+  filter: drop-shadow(0 4px 4px rgba($black, 0.25));
 }
 
 .slick-active button {
@@ -164,6 +188,8 @@
 
   .slider__link {
     margin-bottom: 50px;
+    max-width: 82px;
+    padding-bottom: 3px;
   }
 
   .product-page .slider__link {
@@ -184,11 +210,6 @@
     width: 324px;
     height: 340px;
     object-fit: cover;
-  }
-
-  .slider__link {
-    max-width: 82px;
-    padding-bottom: 3px;
   }
 
   .slick-arrow {
@@ -213,7 +234,7 @@
 @media (max-width: $mobile-width-only) {
   .slider {
     padding: 60px 0;
-    padding-bottom: 56px;
+    padding-bottom: 58px;
   }
 
   .product-page .slider {
@@ -260,24 +281,21 @@
   .slick-dots {
     position: relative;
     justify-content: flex-start;
-  }
 
-  .slick-dots {
     &::before {
       content: "of";
       position: absolute;
       left: 136px;
-      top: 1px;
+      top: 0;
     }
 
     &::after {
       content: "6";
       position: absolute;
-      top: 1px;
+      top: 0;
       left: 160px;
     }
   }
-
 
   .slick-dots li {
     display: none;

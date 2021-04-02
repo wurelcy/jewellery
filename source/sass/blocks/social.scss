@@ -1,9 +1,11 @@
 .social {
   margin-left: auto;
+  margin-right: 2px;
 }
 
 .social__link svg {
-  margin-right: 13px;
+  margin-right: 11px;
+  fill: currentColor;
 }
 
 @media (max-width: $tablet-width) {
@@ -35,7 +37,7 @@
 
   .social .footer__item {
     &:first-child svg {
-       width: 12px;
+      width: 12px;
     }
   }
 }

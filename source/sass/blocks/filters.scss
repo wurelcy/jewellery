@@ -12,11 +12,11 @@
 
 .filters__block {
   background-color: $white;
+  cursor: pointer;
 }
 
 .filters fieldset {
   display: block;
-  border: 0;
   padding: 0;
   margin: 0;
   position: relative;
@@ -69,6 +69,7 @@
 .filters__item label {
   padding-left: 25px;
   position: relative;
+  cursor: pointer;
 }
 
 .filters__item input {
@@ -197,8 +198,8 @@
   }
 }
 
-.form__submit,
-.form__reset {
+.filters__submit,
+.filters__reset {
   display: block;
   width: 100%;
   border: 1px solid $brown;
@@ -210,15 +211,36 @@
   cursor: pointer;
 }
 
-.form__submit {
+.filters__submit {
   margin-top: 35px;
   background-color: $brown;
   color: $white;
   margin-bottom: 25px;
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+    color: $brown;
+  }
+
+  &:active {
+    background-color: $brown;
+    color: $grey;
+    opacity: 0.6;
+  }
 }
 
-.form__reset {
+.filters__reset {
   background-color: $white;
+
+  &:hover,
+  &:focus {
+    background-color: $brown;
+  }
+
+  &:active {
+    color: $grey;
+  }
 }
 
 @media (max-width: $tablet-width) {
@@ -238,7 +260,7 @@
     font-size: 16px;
     line-height: 21px;
     margin-top: 27px;
-    box-shadow: 0px 5px 32px rgba($grey, 0.24);
+    box-shadow: 0 5px 32px rgba($grey, 0.24);
     padding-bottom: 40px;
   }
 
@@ -249,8 +271,8 @@
     padding: 25px 0;
   }
 
-  .form__submit,
-  .form__reset {
+  .filters__submit,
+  .filters__reset {
     width: 362px;
     margin-left: auto;
     margin-right: auto;
@@ -356,8 +378,8 @@
     right: 65px;
   }
 
-  .form__submit,
-  .form__reset {
+  .filters__submit,
+  .filters__reset {
     width: 230px;
   }
 }

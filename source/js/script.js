@@ -160,6 +160,11 @@ $(document).ready(function () {
       }
     });
 
+    overlay.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      closePopup('login-popup--opened', 'login-popup--closed', loginPopup);
+    });
+
     loginSubmit.addEventListener('click', (evt) => {
       if (loginEmailInput.value.valueMissing && loginPasswordInput.value.valueMissing) {
         evt.preventDefault();
@@ -228,6 +233,22 @@ $(document).ready(function () {
   }
 
   if (filterBlocks) {
-    renderAccordion(filterBlocks, 'filters__body', 'filters__block--closed');
+    filterBlocks.forEach((block) => {
+      block.classList.add('filters__block--closed');
+      block.querySelector('.filters__body').style.maxHeight = '0px';
+
+      block.addEventListener('click', function() {
+        if (block.classList.contains('filters__block--closed')) {
+
+          let insideElHeight = block.querySelector('.filters__body' + ' > *').clientHeight;
+
+          block.classList.remove('filters__block--closed');
+          block.querySelector('.filters__body').style.maxHeight = insideElHeight + 'px';
+        } else {
+          block.querySelector('.filters__body').style.maxHeight = '0px';
+          block.classList.add('filters__block--closed');
+        }
+      });
+    });
   }
 });

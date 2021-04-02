@@ -8,7 +8,6 @@
   max-width: 1366px;
   width: 86%;
   display: flex;
-  //align-items: center;
 }
 
 .footer__list {
@@ -23,6 +22,15 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 21px;
+
+  &:hover,
+  &:focus {
+    color: $brown;
+  }
+
+  &:active {
+    color: $grey;
+  }
 
   &:last-child {
     margin-bottom: 0;
