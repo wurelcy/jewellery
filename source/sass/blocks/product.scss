@@ -44,6 +44,8 @@
   margin: 0;
   margin-bottom: 30px;
   display: flex;
+  flex-wrap: wrap;
+  max-width: 300px;
 }
 
 .product__tab {
@@ -144,12 +146,16 @@
 
 @media (max-width: 1200px) {
   .product .container {
-    max-width: 1000px;
+    max-width: 990px;
   }
 
   .product__info {
     margin: 0;
     margin-left: auto;
+  }
+
+  .product__specs {
+    width: 300px;
   }
 }
 

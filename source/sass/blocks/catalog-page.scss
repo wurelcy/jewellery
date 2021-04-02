@@ -8,6 +8,8 @@
 
 .catalog-page .top-wrapper {
   background: $brown url("../img/bg-catalog@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 
   @media (min-resolution: 2dppx) {
     background: $brown url("../img/bg-catalog@2x.png");

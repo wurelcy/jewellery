@@ -18,13 +18,13 @@
 }
 
 .blog__article-large {
-  position: relative;
   margin-left: 30px;
+  position: relative;
 }
 
 .blog__article-large .article__wrapper {
   position: absolute;
-  bottom: 0;
+  top: 330px;
   right: 0;
   min-height: 300px;
 }
@@ -106,6 +106,7 @@
     position: relative;
     width: 339px;
     padding: 85px 0;
+    top: 0;
   }
 }
 

@@ -417,12 +417,12 @@ a {
   order: 1; }
 
 .blog__article-large {
-  position: relative;
-  margin-left: 30px; }
+  margin-left: 30px;
+  position: relative; }
 
 .blog__article-large .article__wrapper {
   position: absolute;
-  bottom: 0;
+  top: 330px;
   right: 0;
   min-height: 300px; }
 
@@ -485,7 +485,8 @@ a {
   .blog__article-large .article__wrapper {
     position: relative;
     width: 339px;
-    padding: 85px 0; } }
+    padding: 85px 0;
+    top: 0; } }
 
 @media (max-width: 767px) {
   .article {
@@ -1017,7 +1018,7 @@ a {
 .inst__item:last-child picture:last-of-type img {
   margin-left: 0; }
 
-@media (max-width: 1170px) {
+@media (max-width: 1250px) {
   .inst__list {
     max-width: 690px;
     justify-content: center; } }
@@ -1329,7 +1330,13 @@ a {
     line-height: 43px;
     letter-spacing: 0; }
 
+@media (max-width: 1250px) {
+  .main-page .container {
+    width: 1000px; } }
+
 @media (max-width: 1023px) {
+  .main-page .container {
+    width: auto; }
   .top-wrapper p {
     margin-right: 15px; } }
 
@@ -1355,7 +1362,9 @@ a {
   max-width: 1170px; }
 
 .catalog-page .top-wrapper {
-  background: #a87b62 url("../img/bg-catalog@1x.jpg"); }
+  background: #a87b62 url("../img/bg-catalog@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
     .catalog-page .top-wrapper {
       background: #a87b62 url("../img/bg-catalog@2x.png");
@@ -1558,6 +1567,10 @@ a {
 
 .slick-active button {
   color: #1d1613; }
+
+@media (max-width: 1250px) {
+  .slider {
+    max-width: 1000px; } }
 
 @media (max-width: 1023px) {
   .slider {
@@ -2081,7 +2094,9 @@ a {
   padding: 0;
   margin: 0;
   margin-bottom: 30px;
-  display: flex; }
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 300px; }
 
 .product__tab {
   font-weight: 500;
@@ -2154,10 +2169,12 @@ a {
 
 @media (max-width: 1200px) {
   .product .container {
-    max-width: 1000px; }
+    max-width: 990px; }
   .product__info {
     margin: 0;
-    margin-left: auto; } }
+    margin-left: auto; }
+  .product__specs {
+    width: 300px; } }
 
 @media (max-width: 1023px) {
   .product .container {

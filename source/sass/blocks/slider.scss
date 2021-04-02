@@ -170,6 +170,12 @@
   color: $darkest;
 }
 
+@media (max-width: 1250px) {
+  .slider {
+    max-width: 1000px;
+  }
+}
+
 @media (max-width: $tablet-width) {
   .slider {
     max-width: 768px;
