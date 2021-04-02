@@ -249,6 +249,12 @@
     padding-bottom: 5px;
   }
 
+  .header__search input {
+    margin-top: 0;
+    width: 200px;
+    outline: none;
+  }
+
   .header__cart {
     margin-top: 18px;
   }

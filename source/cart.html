@@ -9,12 +9,16 @@
 </head>
   <body class="page-body">
       <div class="container">
-        <section class="cart-popup cart-popup--closed">
+        <section class="cart-popup">
           <a href="index.html"></a>
           <h2 class="visually-hidden">Added to cart popup</h2>
-          <pThe item was added to your cart</p>
+          <p>The item was added to your cart</p>
           <div class="cart-popup__item">
-            <img src="img/necklace-detail@1x.jpg" alt="">
+            <picture>
+              <source type="image/webp" srcset="img/necklace-detail@1x.webp 1x, img/necklace-detail@2x.webp 2x">
+              <!-- 1х: 84px; 2x: 168px -->
+              <img src="img/necklace-detail@1x.jpg" srcset="img/necklace-detail@2x.jpg 2x" alt="Item image" width="84" height="79">
+            </picture>
             <div class="cart-popup__details">
               <p>Gold Necklace</p>
               <p>$ <span>115</span></p>
