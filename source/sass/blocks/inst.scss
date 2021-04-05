@@ -1,5 +1,8 @@
 .inst {
   padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .inst p {
@@ -17,14 +20,11 @@
 }
 
 .inst__link {
-  display: block;
   margin-bottom: 65px;
   font-weight: 500;
   font-size: 16px;
   line-height: 21px;
   text-align: center;
-  flex-grow: 1;
-  flex-basis: 100%;
   position: relative;
 
   &:hover,
@@ -57,26 +57,30 @@
   flex-wrap: wrap;
 }
 
-.inst__item img {
+.inst__wrapper {
   margin-right: 30px;
   margin-bottom: 30px;
 }
 
-.inst__item {
-  &:nth-child(3n) img {
-    margin-right: 16px;
-  }
+.inst__wrapper img {
+  margin: 0;
+}
 
-  &:last-child img {
-    margin-left: 14px;
-    margin-right: 0;
-  }
+.inst__wrapper--fourth,
+.inst__wrapper--fifth  {
+  margin-right: 16px;
+}
 
-  &:last-child picture {
-    &:last-of-type img {
-      margin-left: 0;
-    }
-  }
+.inst__wrapper--sixth {
+  margin-left: 14px;
+  margin-right: 0;
+  width: 218px;
+}
+
+.inst__wrapper--seventh {
+  margin-left: 0;
+  margin-right: 0;
+  width: 232px;
 }
 
 @media (max-width: 1250px) {
@@ -101,56 +105,47 @@
     flex-wrap: nowrap;
   }
 
-  .inst__item img {
+  .inst__wrapper {
     width: 133px;
     margin-right: 18px;
     margin-bottom: 18px;
   }
 
-  .inst__item picture {
-    &:last-of-type img {
+  .inst__wrapper {
+    &:last-child {
       margin-bottom: 0;
     }
   }
 
-  .inst__item {
-    &:nth-child(3n) img {
-      height: 111px;
-      width: 134px;
-      margin-right: 6px;
-    }
+  .inst__wrapper--fourth {
+    height: 111px;
+    width: 134px;
+    margin-right: 6px;
+  }
 
-    &:nth-child(3n) picture {
-      &:last-of-type img {
-        width: 126px;
-        margin-right: 12px;
-      }
-    }
+  .inst__wrapper--fifth {
+    width: 126px;
+    margin-right: 12px;
+  }
 
-    &:nth-child(2n) img {
-      width: 231px;
-      height: 240px;
-    }
+  .inst__wrapper--third {
+    width: 231px;
+    height: 240px;
+  }
 
-    &:last-child img {
-      margin-left: 12px;
-      margin-right: 0;
-      width: 126px;
-      height: 126px;
+  .inst__wrapper--sixth {
+    margin-left: 12px;
+    margin-right: 0;
+    width: 126px;
+    height: 126px;
+  }
 
-      &:last-of-type {
-        margin-left: 12px;
-        margin-right: 0;
-      }
-    }
-
-    &:last-child picture {
-      &:last-of-type img {
-        width: 134px;
-        height: 96px;
-        margin-left: 4px;
-      }
-    }
+  .inst__wrapper--seventh {
+    width: 134px;
+    height: 126px;
+    height: 96px;
+    margin-right: 0;
+    margin-left: 4px;
   }
 }
 
@@ -169,58 +164,54 @@
     flex-wrap: wrap;
   }
 
-  .inst__item img {
+  .inst__wrapper {
     width: 130px;
     margin-right: 15px;
     margin-bottom: 15px;
   }
 
-  .inst__item picture {
-    &:last-of-type img {
-      margin-bottom: 0;
-    }
+  .inst__wrapper--fourth {
+    margin-right: 0;
+    width: 145px;
+    height: 121px;
+    margin-top: 8px;
+    object-fit: cover;
+    margin-bottom: 0;
+    order: 1;
+  }
+
+  .inst__wrapper--fourth img {
+    object-fit: cover;
+  }
+
+  .inst__wrapper--fifth {
+    width: 130px;
+    height: 115px;
+    margin-right: 15px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .inst__wrapper--third {
+    width: 145px;
+    height: 226px;
+    margin-right: 0;
+    margin-bottom: 7px;
+  }
+
+  .inst__wrapper--third img {
+    object-fit: cover;
+    height: 100%;
   }
 
   .inst__item {
+    &:last-child {
+      display: none;
+    }
+
     &:nth-child(3n) {
       display: flex;
       align-items: baseline;
-    }
-
-    &:nth-child(3n) img {
-      margin-right: 0;
-      width: 145px;
-      height: 121px;
-      margin-top: 8px;
-      object-fit: cover;
-      margin-bottom: 0;
-    }
-
-    &:nth-child(3n) picture {
-      order: 1;
-
-      &:last-of-type {
-        order: 0;
-      }
-
-      &:last-of-type img {
-        width: 130px;
-        height: 115px;
-        margin-right: 15px;
-        margin-top: 0;
-      }
-    }
-
-    &:nth-child(2n) img {
-      width: 145px;
-      height: 226px;
-      object-fit: cover;
-      margin-right: 0;
-      margin-bottom: 7px;
-    }
-
-    &:last-child picture {
-      display: none;
     }
   }
 }

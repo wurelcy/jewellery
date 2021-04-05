@@ -1,5 +1,18 @@
 .info {
   margin-right: 73px;
+
+  @media (max-width: 1160px) {
+    margin-right: auto;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-right: 87px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-right: 0;
+    margin-bottom: 34px;
+  }
 }
 
 .info .footer__item {
@@ -7,25 +20,5 @@
 
   &:last-child {
     margin-bottom: 0;
-  }
-}
-
-
-@media (max-width: 1160px) {
-  .info {
-    margin-right: auto;
-  }
-}
-
-@media (max-width: $tablet-width) {
-  .info {
-    margin-right: 87px;
-  }
-}
-
-@media (max-width: $mobile-width-only) {
-  .info {
-    margin-right: 0;
-    margin-bottom: 34px;
   }
 }

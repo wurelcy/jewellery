@@ -65,4 +65,11 @@
     flex-direction: column;
     align-items: flex-start;
   }
+
+
+  .footer__item {
+    &:first-child svg {
+      width: 12px;
+    }
+  }
 }

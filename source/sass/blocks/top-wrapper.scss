@@ -39,6 +39,19 @@
   }
 }
 
+.top-wrapper--catalog p {
+  margin: 0;
+  margin-left: 2px;
+  font-size: 32px;
+  line-height: 44px;
+
+  &:last-child {
+    text-transform: none;
+    font-size: 22px;
+    line-height: 29px;
+  }
+}
+
 @media (max-width: 1250px) {
   .main-page .container {
     width: 1000px;
@@ -52,6 +65,18 @@
 
   .top-wrapper p {
     margin-right: 15px;
+  }
+
+  .top-wrapper--catalog p {
+    font-size: 34px;
+    line-height: 44px;
+    margin-bottom: 2px;
+    letter-spacing: normal;
+
+    &:last-child {
+      font-size: 22px;
+      line-height: 29px;
+    }
   }
 }
 
@@ -71,6 +96,13 @@
       font-size: 34px;
       line-height: 41px;
       letter-spacing: 0;
+    }
+  }
+
+  .top-wrapper--catalog p {
+    &:last-child {
+      max-width: 250px;
+      margin: 0 auto;
     }
   }
 }

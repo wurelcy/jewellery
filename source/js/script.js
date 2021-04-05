@@ -61,6 +61,11 @@ $(document).ready(function () {
   const cartPopup = document.querySelector('.cart-popup');
   const overlay = document.querySelector('.overlay');
 
+  const templateLeft = document.querySelector('.arrow-left');
+  const templateLeftSvg = templateLeft.content.querySelector('svg');
+  const templateRight = document.querySelector('.arrow-right');
+  const templateRightSvg = templateRight.content.querySelector('svg');
+
   /* Menu */
 
   if (header) {
@@ -100,8 +105,8 @@ $(document).ready(function () {
 
     deleteText(arrowPrev);
     deleteText(arrowNext);
-    arrowPrev.innerHTML = '<svg width="29" height="9"><use xlink:href="#icon-arrow-left"></use></svg>';
-    arrowNext.innerHTML = '<svg width="29" height="9"><use xlink:href="#icon-arrow-right"></use></svg>';
+    arrowPrev.appendChild(templateLeftSvg.cloneNode(true));
+    arrowNext.appendChild(templateRightSvg.cloneNode(true));
 
     if (window.clientWidth < 768) {
       arrows.forEach((arrow) => {

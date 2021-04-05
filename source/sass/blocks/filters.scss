@@ -198,8 +198,7 @@
   }
 }
 
-.filters__submit,
-.filters__reset {
+.filters__btn {
   display: block;
   width: 100%;
   border: 1px solid $brown;
@@ -271,8 +270,7 @@
     padding: 25px 0;
   }
 
-  .filters__submit,
-  .filters__reset {
+  .filters__btn {
     width: 362px;
     margin-left: auto;
     margin-right: auto;
@@ -378,8 +376,7 @@
     right: 65px;
   }
 
-  .filters__submit,
-  .filters__reset {
+  .filters__btn {
     width: 230px;
   }
 }

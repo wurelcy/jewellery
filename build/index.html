@@ -222,45 +222,47 @@
         <section class="blog">
           <h2>Blog</h2>
           <a href="#" class="blog__link" aria-label="Read all articles">Read All</a>
-          <div class="blog__column">
-            <article class="blog__article-small article">
+          <div class="blog__container">
+            <div class="blog__column">
+              <article class="blog__article-small article">
+                <picture>
+                  <source type="image/webp" srcset="img/blog-care@1x.webp 1x, img/blog-care@2x.webp 2x">
+                    <!-- 1х: 285px; 2x: 570px -->
+                  <img src="img/blog-care@1x.jpg" srcset="img/blog-care@2x.jpg 2x" alt="Marble earrings" width="285" height="300">
+                </picture>
+                <div class="article__wrapper">
+                  <p>September 30, 2019</p>
+                  <h3>How to care for your jewellery</h3>
+                  <a href="#" class="article__link" aria-label="Read article">Read Article</a>
+                </div>
+              </article>
+              <article class="blog__article-small article">
+                <h3 class="visually-hidden">How to care for your jewellery</h3>
+                <picture>
+                  <source type="image/webp" srcset="img/blog-power@1x.webp 1x, img/blog-power@2x.webp 2x">
+                    <!-- 1х: 285px; 2x: 570px -->
+                  <img src="img/blog-power@1x.jpg" srcset="img/blog-power@2x.jpg 2x" alt="Marble earrings" width="285" height="300">
+                </picture>
+                <div class="article__wrapper">
+                  <p>September 23, 2019</p>
+                  <h3>Power of crystals</h3>
+                  <a href="#" class="article__link" aria-label="Read article">Read Article</a>
+                </div>
+              </article>
+            </div>
+            <article class="blog__article-large article">
               <picture>
-                <source type="image/webp" srcset="img/blog-care@1x.webp 1x, img/blog-care@2x.webp 2x">
-                  <!-- 1х: 285px; 2x: 570px -->
-                <img src="img/blog-care@1x.jpg" srcset="img/blog-care@2x.jpg 2x" alt="Marble earrings" width="285" height="300">
+                <source type="image/webp" srcset="img/blog-trends@1x.webp 1x, img/blog-trends@2x.webp 2x">
+                  <!-- 1х: 570px; 2x: 1040px -->
+                <img src="img/blog-trends@1x.jpg" srcset="img/blog-trends@2x.jpg 2x" alt="Marble earrings" width="570" height="630">
               </picture>
               <div class="article__wrapper">
-                <p>September 30, 2019</p>
-                <h3>How to care for your jewellery</h3>
-                <a href="#" class="article__link" aria-label="Read article">Read Article</a>
-              </div>
-            </article>
-            <article class="blog__article-small article">
-              <h3 class="visually-hidden">How to care for your jewellery</h3>
-              <picture>
-                <source type="image/webp" srcset="img/blog-power@1x.webp 1x, img/blog-power@2x.webp 2x">
-                  <!-- 1х: 285px; 2x: 570px -->
-                <img src="img/blog-power@1x.jpg" srcset="img/blog-power@2x.jpg 2x" alt="Marble earrings" width="285" height="300">
-              </picture>
-              <div class="article__wrapper">
-                <p>September 23, 2019</p>
-                <h3>Power of crystals</h3>
+                <p>September 16, 2019</p>
+                <h3>AW 19 trends</h3>
                 <a href="#" class="article__link" aria-label="Read article">Read Article</a>
               </div>
             </article>
           </div>
-          <article class="blog__article-large article">
-            <picture>
-              <source type="image/webp" srcset="img/blog-trends@1x.webp 1x, img/blog-trends@2x.webp 2x">
-                <!-- 1х: 570px; 2x: 1040px -->
-              <img src="img/blog-trends@1x.jpg" srcset="img/blog-trends@2x.jpg 2x" alt="Marble earrings" width="570" height="630">
-            </picture>
-            <div class="article__wrapper">
-              <p>September 16, 2019</p>
-              <h3>AW 19 trends</h3>
-              <a href="#" class="article__link" aria-label="Read article">Read Article</a>
-            </div>
-          </article>
         </section>
         <section class="faq">
           <h2>Frequently asked questions</h2>
@@ -297,47 +299,61 @@
           <a href="#" class="inst__link" aria-label="Go to CH instagram">Follow Us</a>
           <ul class="inst__list">
             <li class="inst__item">
-              <picture>
-                <source type="image/webp" srcset="img/inst-1@1x.webp 1x, img/inst-1@2x.webp 2x">
-                  <!-- 1х: 230px; 2x: 460px -->
-                <img src="img/inst-1@1x.jpg" srcset="img/inst-1@2x.jpg 2x" alt="Marble earrings" width="230" height="230">
-              </picture>
-              <picture>
-                <source type="image/webp" srcset="img/inst-2@1x.webp 1x, img/inst-2@2x.webp 2x">
-                  <!-- 1х: 230px; 2x: 460px -->
-                <img src="img/inst-2@1x.jpg" srcset="img/inst-2@2x.jpg 2x" alt="Marble earrings" width="230" height="154">
-              </picture>
+              <div class="inst__wrapper inst__wrapper--first">
+                <picture>
+                  <source type="image/webp" srcset="img/inst-1@1x.webp 1x, img/inst-1@2x.webp 2x">
+                    <!-- 1х: 230px; 2x: 460px -->
+                  <img src="img/inst-1@1x.jpg" srcset="img/inst-1@2x.jpg 2x" alt="Marble earrings" width="230" height="230">
+                </picture>
+              </div>
+              <div class="inst__wrapper inst__wrapper--second">
+                <picture>
+                  <source type="image/webp" srcset="img/inst-2@1x.webp 1x, img/inst-2@2x.webp 2x">
+                    <!-- 1х: 230px; 2x: 460px -->
+                  <img src="img/inst-2@1x.jpg" srcset="img/inst-2@2x.jpg 2x" alt="Marble earrings" width="230" height="154">
+                </picture>
+              </div>
             </li>
             <li class="inst__item">
-              <picture>
-                <source type="image/webp" srcset="img/inst-3@1x.webp 1x, img/inst-3@2x.webp 2x">
-                  <!-- 1х: 400px; 2x: 800px -->
-                <img src="img/inst-3@1x.jpg" srcset="img/inst-3@2x.jpg 2x" alt="Marble earrings" width="400" height="240">
-              </picture>
+              <div class="inst__wrapper inst__wrapper--third">
+                <picture>
+                  <source type="image/webp" srcset="img/inst-3@1x.webp 1x, img/inst-3@2x.webp 2x">
+                    <!-- 1х: 400px; 2x: 800px -->
+                  <img src="img/inst-3@1x.jpg" srcset="img/inst-3@2x.jpg 2x" alt="Marble earrings" width="400" height="240">
+                </picture>
+              </div>
             </li>
             <li class="inst__item">
-              <picture>
-                <source type="image/webp" srcset="img/inst-4@1x.webp 1x, img/inst-4@2x.webp 2x">
-                  <!-- 1х: 232px; 2x: 464px -->
-                <img src="img/inst-4@1x.jpg" srcset="img/inst-4@2x.jpg 2x" alt="Marble earrings" width="232" height="193">
-              </picture>
-              <picture>
-                <source type="image/webp" srcset="img/inst-5@1x.webp 1x, img/inst-5@2x.webp 2x">
-                  <!-- 1х: 218px; 2x: 436px -->
-                <img src="img/inst-5@1x.jpg" srcset="img/inst-5@2x.jpg 2x" alt="Marble earrings" width="218" height="191">
-              </picture>
+              <div class="inst__wrapper inst__wrapper--fourth">
+                <picture>
+                  <source type="image/webp" srcset="img/inst-4@1x.webp 1x, img/inst-4@2x.webp 2x">
+                    <!-- 1х: 232px; 2x: 464px -->
+                  <img src="img/inst-4@1x.jpg" srcset="img/inst-4@2x.jpg 2x" alt="Marble earrings" width="232" height="193">
+                </picture>
+              </div>
+              <div class="inst__wrapper inst__wrapper--fifth">
+                <picture>
+                  <source type="image/webp" srcset="img/inst-5@1x.webp 1x, img/inst-5@2x.webp 2x">
+                    <!-- 1х: 218px; 2x: 436px -->
+                  <img src="img/inst-5@1x.jpg" srcset="img/inst-5@2x.jpg 2x" alt="Marble earrings" width="218" height="191">
+                </picture>
+              </div>
             </li>
             <li class="inst__item">
-              <picture>
-                <source type="image/webp" srcset="img/inst-6@1x.webp 1x, img/inst-6@2x.webp 2x">
-                  <!-- 1х: 400px; 2x: 800px -->
-                <img src="img/inst-6@1x.jpg" srcset="img/inst-6@2x.jpg 2x" alt="Marble earrings" width="218" height="218">
-              </picture>
-              <picture>
+              <div class="inst__wrapper inst__wrapper--sixth">
+                <picture>
+                  <source type="image/webp" srcset="img/inst-6@1x.webp 1x, img/inst-6@2x.webp 2x">
+                    <!-- 1х: 400px; 2x: 800px -->
+                  <img src="img/inst-6@1x.jpg" srcset="img/inst-6@2x.jpg 2x" alt="Marble earrings" width="218" height="218">
+                </picture>
+              </div>
+              <div class="inst__wrapper inst__wrapper--seventh">
+                <picture>
                 <source type="image/webp" srcset="img/inst-7@1x.webp 1x, img/inst-7@2x.webp 2x">
                   <!-- 1х: 400px; 2x: 800px -->
                 <img src="img/inst-7@1x.jpg" srcset="img/inst-7@2x.jpg 2x" alt="Marble earrings" width="232" height="166">
               </picture>
+              </div>
             </li>
           </ul>
         </section>
@@ -459,6 +475,18 @@
       </form>
     </section>
 
+    <template class="arrow-left">
+      <svg width="29" height="9">
+        <use xlink:href="#icon-arrow-left"></use>
+      </svg>
+    </template>
+
+    <template class="arrow-right">
+      <svg width="29" height="9">
+        <use xlink:href="#icon-arrow-right"></use>
+      </svg>
+    </template>
+
     <svg width="0" height="0" style="display: none;">
       <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 10" id="icon-arrow">
         <path d="M16 9L8.5 1 1 9" stroke="#A87B62"></path>
@@ -503,9 +531,7 @@
       </symbol>
     </svg>
 
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="slick/slick.min.js"></script>
+    <script src="js/vendor.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

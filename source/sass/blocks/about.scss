@@ -1,9 +1,9 @@
 .about {
   margin-right: 16px;
-}
 
-@media (max-width: $tablet-width) {
-  .about {
-    margin-right: 12px;
+  @media (max-width: $tablet-width) {
+      margin-right: 12px;
   }
 }
+
+

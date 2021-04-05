@@ -141,7 +141,7 @@
       </section>
       <section class="slider">
         <h2 class="visually-hidden">Relative items</h2>
-          <div class="slider__title">
+          <div class="slider__title slider__title--product-page">
             <p>You May Also Like</p>
             <a href="catalog.html" class="slider__link" aria-label="Go to catalog page">Shop Now</a>
           </div>
@@ -422,10 +422,22 @@
         <p>Cart subtotal: $ <span>115</span></p>
       </div>
       <div class="cart-popup__links">
-        <a href="product.html" class="cart-popup__continue">Continue shopping</a>
-        <a href="#" class="cart-popup__to-cart">Checkout</a>
+        <a href="product.html" class="cart-popup__continue cart-popup__link">Continue shopping</a>
+        <a href="#" class="cart-popup__to-cart cart-popup__link">Checkout</a>
       </div>
     </section>
+
+    <template class="arrow-left">
+      <svg width="29" height="9">
+        <use xlink:href="#icon-arrow-left"></use>
+      </svg>
+    </template>
+
+    <template class="arrow-right">
+      <svg width="29" height="9">
+        <use xlink:href="#icon-arrow-right"></use>
+      </svg>
+    </template>
 
     <svg width="0" height="0" style="display: none;">
       <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 10" id="icon-arrow">
@@ -471,9 +483,7 @@
       </symbol>
     </svg>
 
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="slick/slick.min.js"></script>
+    <script src="js/vendor.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

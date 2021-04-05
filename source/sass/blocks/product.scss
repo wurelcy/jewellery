@@ -184,12 +184,6 @@
     object-fit: cover;
   }
 
-  .product__img-small picture {
-    &:last-child img {
-      margin-right: 0;
-    }
-  }
-
   .product__img-large img {
     width: 319px;
     height: 286px;

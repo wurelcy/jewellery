@@ -22,19 +22,6 @@
   padding-bottom: 95px;
 }
 
-.catalog-page .top-wrapper p {
-  margin: 0;
-  margin-left: 2px;
-  font-size: 32px;
-  line-height: 44px;
-
-  &:last-child {
-    text-transform: none;
-    font-size: 22px;
-    line-height: 29px;
-  }
-}
-
 .catalog-page {
   position: relative;
 
@@ -69,18 +56,6 @@
     padding: 91px 0;
     padding-bottom: 94px;
   }
-
-  .catalog-page .top-wrapper p {
-    font-size: 34px;
-    line-height: 44px;
-    margin-bottom: 2px;
-    letter-spacing: normal;
-
-    &:last-child {
-      font-size: 22px;
-      line-height: 29px;
-    }
-  }
 }
 
 @media (max-width: $mobile-width-only) {
@@ -92,13 +67,6 @@
   .catalog-page .top-wrapper__overlay {
     padding: 78px 0;
     padding-bottom: 80px;
-  }
-
-  .catalog-page .top-wrapper p {
-    &:last-child {
-      max-width: 250px;
-      margin: 0 auto;
-    }
   }
 
   .catalog-page {
