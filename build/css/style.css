@@ -729,7 +729,7 @@ a {
   .blog__article-small img,
   .blog__article-large img {
     height: 256px; }
-  .blog__article-small:last-child picture {
+  .blog__article-small:last-child .blog__pic-wrap {
     order: 0; }
   .blog__article-large {
     margin-bottom: 0; }
