@@ -2798,6 +2798,14 @@ a {
 .overlay--hidden {
   display: none; }
 
+@media (max-width: 1250px) {
+  .main-page .container {
+    width: 1000px; } }
+
+@media (max-width: 1023px) {
+  .main-page .container {
+    width: auto; } }
+
 .product-page .slider {
   padding-top: 90px; }
 
