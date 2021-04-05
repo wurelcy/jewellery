@@ -108,7 +108,7 @@ const js = () => {
 exports.js = js;
 
 const libs = () => {
-  return gulp.src(`source/js/**/libs-*.js`)
+  return gulp.src(`source/js/vendor/**/*.js`)
     .pipe(plumber())
     .pipe(concat(`vendor.js`))
     .pipe(gulp.dest(`build/js`));
