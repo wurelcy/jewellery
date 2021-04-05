@@ -52,12 +52,6 @@
   }
 }
 
-@media (max-width: 1250px) {
-  .main-page .container {
-    width: 1000px;
-  }
-}
-
 @media (max-width: $tablet-width) {
   .main-page .container {
     width: auto;

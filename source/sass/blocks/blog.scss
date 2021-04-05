@@ -56,7 +56,7 @@
 }
 
 .blog__article-small {
-  &:last-child picture {
+  &:last-child .blog__pic-wrap {
     order: 1;
   }
 }

@@ -11,6 +11,7 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
 const sync = require("browser-sync").create();
+const concat = require(`gulp-concat`);
 
 // Styles
 
@@ -73,8 +74,7 @@ exports.sprite = sprite;
 
 const copy = () => {
   return gulp.src([
-    "source/fonts/**/*.{woff,woff2}",
-    "source/slick/**/*.*",
+    "source/fonts/**/*.{woff,woff2}"
   ], {
     base: "source"
   })
@@ -98,7 +98,7 @@ exports.html = html;
 // JS
 
 const js = () => {
-  return gulp.src("source/js/*.js",
+  return gulp.src("source/js/script.js",
     {
       base: "source"
     })
@@ -106,6 +106,15 @@ const js = () => {
 }
 
 exports.js = js;
+
+const libs = () => {
+  return gulp.src(`source/js/**/libs-*.js`)
+    .pipe(plumber())
+    .pipe(concat(`vendor.js`))
+    .pipe(gulp.dest(`build/js`));
+}
+
+exports.libs = libs;
 
 // Clean
 
@@ -125,6 +134,7 @@ const build = gulp.series(
   webps,
   sprite,
   js,
+  libs,
   html
 );
 

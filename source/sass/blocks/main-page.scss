@@ -1,0 +1,11 @@
+.main-page .container {
+  @media (max-width: 1250px) {
+    width: 1000px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: auto;
+  }
+}
+
+

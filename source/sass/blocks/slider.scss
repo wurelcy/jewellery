@@ -78,9 +78,7 @@
   object-fit: cover;
 }
 
-
-.slider__item h3,
-.catalog__item h3 {
+.slider__item h3 {
   margin: 0;
   margin-top: 20px;
   margin-bottom: 7px;
@@ -89,86 +87,11 @@
   line-height: 21px;
 }
 
-.slider__item p,
-.catalog__item p {
+.slider__item p {
   margin: 0;
   font-weight: bold;
   font-size: 14px;
   line-height: 18px;
-}
-
-.slick-track {
-  width: auto;
-}
-
-.slick-arrow {
-  cursor: pointer;
-  outline: none;
-  background-color: transparent;
-  border: 0;
-  position: absolute;
-  top: -113px;
-  padding: 0;
-
-  &:hover svg,
-  &:focus svg {
-    stroke: rgba($brown, 0.5);
-  }
-
-  &:active svg {
-    stroke: $grey;
-  }
-}
-
-.slick-arrow svg {
-  stroke: $brown;
-  width: 35px;
-  height: auto;
-}
-
-.slick-next {
-  top: -109px;
-  right: 11px;
-}
-
-.slick-prev {
-  left: -4px;
-}
-
-.catalog__item .slick-prev {
-  top: -109px;
-  left: 10px;
-}
-
-.slick-dots {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  margin-left: 15px;
-  justify-content: center;
-}
-
-.slick-dots button {
-  border: 0;
-  background-color: transparent;
-  padding: 0;
-  margin-right: 13px;
-  outline: none;
-  color: $grey;
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    color: $brown;
-  }
-
-  &:active {
-    color: $grey;
-  }
-}
-
-.slick-active button {
-  color: $darkest;
 }
 
 @media (max-width: 1250px) {
@@ -209,24 +132,6 @@
     height: 340px;
     object-fit: cover;
   }
-
-  .slick-arrow {
-    top: -100px;
-  }
-
-  .slick-arrow svg {
-    width: 36px;
-    height: 25px;
-  }
-
-  .slick-next {
-    top: -100px;
-    right: 13px;
-  }
-
-  .slick-prev {
-    left: 15px;
-  }
 }
 
 @media (max-width: $mobile-width-only) {
@@ -260,40 +165,7 @@
     margin-bottom: 5px;
   }
 
-  .slick-arrow {
-    display: none;
-  }
-
-  .slick-dots {
-    position: relative;
-    justify-content: flex-start;
-
-    &::before {
-      content: "of";
-      position: absolute;
-      left: 136px;
-      top: 0;
-    }
-
-    &::after {
-      content: "6";
-      position: absolute;
-      top: 0;
-      left: 160px;
-    }
-  }
-
-  .slick-dots li {
-    display: none;
-    margin-left: 120px;
-  }
-
-  .slick-dots,
   .slider--card .slick-dots {
     margin-top: 32px;
-  }
-
-  .slick-dots .slick-active {
-    display: block;
   }
 }

@@ -98,7 +98,7 @@ $(document).ready(function () {
     dotsList.style.display = 'flex';
   }
 
-  if (arrowNext && arrowNext) {
+  if (arrowNext && arrowPrev) {
   let deleteText = (arrow) => {
       arrow.textContent = '';
     };
