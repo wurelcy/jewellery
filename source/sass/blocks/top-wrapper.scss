@@ -63,6 +63,7 @@
     font-size: 34px;
     line-height: 44px;
     margin-bottom: 2px;
+    margin-right: 0;
     letter-spacing: normal;
 
     &:last-child {
@@ -75,7 +76,7 @@
 @media (max-width: $mobile-width-only) {
   .top-wrapper__overlay {
     padding-top: 190px;
-    padding-bottom: 189px;
+    padding-bottom: 188px;
   }
 
   .top-wrapper p {
@@ -92,8 +93,14 @@
   }
 
   .top-wrapper--catalog p {
+    font-size: 34px;
+    line-height: 41px;
+    margin-bottom: 5px;
+
     &:last-child {
       max-width: 250px;
+      font-size: 22px;
+      line-height: 26px;
       margin: 0 auto;
     }
   }

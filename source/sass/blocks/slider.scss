@@ -2,7 +2,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding-top: 120px;
-  padding-bottom: 126px;
+  padding-bottom: 128px;
 }
 
 .slider__title {
@@ -47,7 +47,7 @@
     height: 1px;
     width: 100%;
     background-color: $brown;
-    bottom: 0px;
+    bottom: 0;
     left: 50%;
     transform: translate(-50%);
   }
@@ -81,7 +81,7 @@
 .slider__item h3 {
   margin: 0;
   margin-top: 20px;
-  margin-bottom: 7px;
+  margin-bottom: 6px;
   font-weight: 500;
   font-size: 16px;
   line-height: 21px;
@@ -175,9 +175,13 @@
   }
 
   .slider__link {
-    margin-bottom: 50px;
+    margin-bottom: 51px;
     max-width: 82px;
     padding-bottom: 3px;
+
+    &::after {
+      bottom: -1px;
+    }
   }
 
   .slider__list {
@@ -194,6 +198,10 @@
     width: 324px;
     height: 340px;
     object-fit: cover;
+  }
+
+  .slider__item h3 {
+    margin-top: 21px;
   }
 
   .slider__nav {

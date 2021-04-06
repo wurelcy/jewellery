@@ -4,7 +4,7 @@
 
 .product-page .slider__link {
   padding-bottom: 4px;
-  margin-bottom: 60px;
+  margin-bottom: 61px;
   max-width: 81px;
 }
 
@@ -12,14 +12,24 @@
   filter: drop-shadow(0 4px 4px rgba($black, 0.25));
 }
 
+.product-page .slick-prev {
+  left: 10px;
+  top: -109px;
+}
+
 @media (max-width: $tablet-width) {
   .product-page .slider {
     padding: 70px 0;
-    padding-bottom: 75px;
+    padding-bottom: 77px;
   }
 
   .product-page .slider__link {
     margin-bottom: 50px;
+  }
+
+  .product-page .slick-prev {
+    left: 14px;
+    top: -101px;
   }
 }
 
