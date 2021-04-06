@@ -10,6 +10,7 @@
   margin-bottom: 12px;
   font-size: 14px;
   line-height: 21px;
+  align-items: center;
 }
 
 .header--catalog .header__wrapper,
@@ -23,6 +24,10 @@
 
 .header__logo {
   margin: 0 auto;
+}
+
+.header--catalog .header__logo,
+.header--product .header__logo {
   cursor: pointer;
 
   &:hover svg,
@@ -47,20 +52,21 @@
 }
 
 .header__search input {
-  margin-top: 14px;
+  margin-bottom: 28px;
   border: 0;
   outline: none;
 }
 
 .header--catalog input,
 .header--product input {
-  margin-top: 24px;
+  margin-bottom: 12px;
 }
 
 .header__login {
-  margin-top: 12px;
+  //margin-top: 12px;
   margin-right: 36px;
   margin-left: 86px;
+  margin-bottom: 25px;
 
   &:hover,
   &:focus {
@@ -72,9 +78,8 @@
   }
 }
 
-
 .header__cart {
-  margin-top: 12px;
+  margin-bottom: 25px;
   margin-right: 5px;
 
   &:hover,
@@ -124,7 +129,6 @@
     height: 16px;
     position: relative;
     outline: none;
-    margin-top: 25px;
   }
 
   .header__toggle span {
@@ -180,8 +184,15 @@
 
   .header--opened,
   .header--nojs {
+    width: 100%;
     background-color: $brown;
     color: $white;
+  }
+
+  .header--opened {
+    height: 100%;
+    position: fixed;
+    z-index: 2;
   }
 
   .header--opened .header__cart svg,
@@ -275,9 +286,9 @@
     height: 20px;
   }
 
-  .header__toggle {
+  /*.header__toggle {
     margin-top: 18px;
-  }
+  }*/
 
   .header__logo svg {
     width: 52px;

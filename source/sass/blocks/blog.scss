@@ -80,6 +80,10 @@
     align-items: center;
   }
 
+  .blog__container {
+    flex-direction: column;
+  }
+
   .blog h2 {
     margin-bottom: 20px;
   }

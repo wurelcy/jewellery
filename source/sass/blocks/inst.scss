@@ -84,9 +84,13 @@
 }
 
 @media (max-width: 1250px) {
-  .inst__list {
-    max-width: 690px;
-    justify-content: center;
+  .inst__wrapper {
+    width: 126px;
+  }
+
+  .inst__wrapper--third {
+    width: 234px;
+    height: 240px;
   }
 }
 

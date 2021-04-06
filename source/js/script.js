@@ -2,8 +2,12 @@
 
 $(document).ready(function () {
   let slider = document.querySelector('.slider__list');
+  let sliderBlock = document.querySelector('.slider');
+
 
   if (slider) {
+    sliderBlock.classList.remove('slider--nojs');
+
   $(slider).slick({
       dots: true,
       infinite: true,
@@ -60,11 +64,7 @@ $(document).ready(function () {
   const cartOpenButton = document.querySelector('.product__add-to-cart');
   const cartPopup = document.querySelector('.cart-popup');
   const overlay = document.querySelector('.overlay');
-
-  const templateLeft = document.querySelector('.arrow-left');
-  const templateLeftSvg = templateLeft.content.querySelector('svg');
-  const templateRight = document.querySelector('.arrow-right');
-  const templateRightSvg = templateRight.content.querySelector('svg');
+  const pageBody = document.querySelector('.page-body');
 
   /* Menu */
 
@@ -99,14 +99,24 @@ $(document).ready(function () {
   }
 
   if (arrowNext && arrowPrev) {
-  let deleteText = (arrow) => {
-      arrow.textContent = '';
+    let deleteText = (arrow) => {
+        arrow.textContent = '';
     };
 
     deleteText(arrowPrev);
     deleteText(arrowNext);
-    arrowPrev.appendChild(templateLeftSvg.cloneNode(true));
-    arrowNext.appendChild(templateRightSvg.cloneNode(true));
+
+    const templateLeft = document.querySelector('.arrow-left');
+    if (templateLeft) {
+      const templateLeftSvg = templateLeft.content.querySelector('svg');
+      arrowPrev.appendChild(templateLeftSvg.cloneNode(true));
+    }
+
+    const templateRight = document.querySelector('.arrow-right');
+    if (templateRight) {
+      const templateRightSvg = templateRight.content.querySelector('svg');
+      arrowNext.appendChild(templateRightSvg.cloneNode(true));
+    }
 
     if (window.clientWidth < 768) {
       arrows.forEach((arrow) => {
@@ -138,12 +148,15 @@ $(document).ready(function () {
     popup.classList.remove(closeClass);
     popup.classList.add(openClass);
     overlay.classList.remove('overlay--hidden');
+    pageBody.classList.add('page-body--special');
+
   };
 
   let closePopup = (openClass, closeClass, popup) => {
     popup.classList.add(closeClass);
     popup.classList.remove(openClass);
     overlay.classList.add('overlay--hidden');
+    pageBody.classList.remove('page-body--special');
   };
 
   /* Login Form */
@@ -152,6 +165,7 @@ $(document).ready(function () {
     loginOpenButton.addEventListener('click', (evt) => {
       evt.preventDefault();
       openPopup('login-popup--opened', 'login-popup--closed', loginPopup);
+      loginEmailInput.focus();
     });
 
     loginCloseButton.addEventListener('click', (evt) => {
@@ -199,6 +213,11 @@ $(document).ready(function () {
       if (evt.key === 'Escape') {
         closePopup('cart-popup--opened', 'cart-popup--closed', cartPopup);
       }
+    });
+
+    overlay.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      closePopup('cart-popup--opened', 'cart-popup--closed', cartPopup);
     });
   }
 

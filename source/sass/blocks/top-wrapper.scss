@@ -6,7 +6,9 @@
 
   @media (min-resolution: 2dppx) {
     background: $brown url("../img/bg-main@2x.jpg");
-    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 }
 
@@ -53,10 +55,6 @@
 }
 
 @media (max-width: $tablet-width) {
-  .main-page .container {
-    width: auto;
-  }
-
   .top-wrapper p {
     margin-right: 15px;
   }

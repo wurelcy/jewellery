@@ -21,7 +21,7 @@
             <use xlink:href="#icon-search"></use>
           </svg>
           <label for="search" class="visually-hidden">What are looking for?</label>
-          <input type="text" placeholder="Type here to search" id="search">
+          <input type="search" placeholder="Type here to search" id="search">
         </div>
         <a class="header__logo" aria-label="Company logo">
           <svg aria-label="Logo" width="66" height="66">
@@ -77,11 +77,21 @@
           <p>Made to be yours</p>
         </div>
       </div>
-      <section class="slider">
+      <section class="slider slider--nojs">
         <h2 class="visually-hidden">New items</h2>
           <div class="slider__title">
             <p>New In</p>
             <a href="catalog.html" class="slider__link" aria-label="Go to catalog page">Shop Now</a>
+            <button class="slider__nav">
+              <svg width="29" height="9">
+                <use xlink:href="#icon-arrow-left"></use>
+              </svg>
+            </button>
+            <button class="slider__nav">
+              <svg width="29" height="9">
+                <use xlink:href="#icon-arrow-right"></use>
+              </svg>
+            </button>
           </div>
         <ul class="slider__list">
           <li class="slider__item">
@@ -215,6 +225,26 @@
               <h3>Marble earrings</h3>
               <p>$ 95</p>
             </a>
+          </li>
+        </ul>
+        <ul class="slider__pagination">
+          <li>
+            <a href="#" class="slider__slide slider__slide--active" aria-label="First page">1</a>
+          </li>
+          <li>
+            <a href="#" class="slider__slide" aria-label="Second page">2</a>
+          </li>
+          <li>
+            <a href="#" class="slider__slide" aria-label="Third page">3</a>
+          </li>
+          <li>
+            <a href="#" class="slider__slide" aria-label="Second page">4</a>
+          </li>
+          <li>
+            <a href="#" class="slider__slide" aria-label="Third page">5</a>
+          </li>
+          <li>
+            <a href="#" class="slider__slide" aria-label="Second page">6</a>
           </li>
         </ul>
       </section>
@@ -369,7 +399,7 @@
           <p>News and updates from CH. No spam, we promise.</p>
           <form action="https://echo.htmlacademy.ru" method="POST">
             <label for="email" class="visually-hidden">Enter your email for receiving our newsletter</label>
-            <input type="email" placeholder="Your E-mail" id="email">
+            <input type="email" placeholder="Your E-mail" id="email" required>
             <button type="submit">
               <span>Sign Up</span>
               <svg width="14" height="14">
@@ -454,7 +484,7 @@
 
     <section class="login-popup login-popup--closed">
       <div class="login-popup__upper-wrapper">
-        <a href="index.html" aria-label="Return back">
+        <a href="index.html" aria-label="Return back" tabindex="1">
         </a>
       </div>
       <h2 class="visually-hidden">Log In form</h2>

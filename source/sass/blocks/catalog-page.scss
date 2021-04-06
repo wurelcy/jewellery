@@ -12,8 +12,9 @@
   background-size: cover;
 
   @media (min-resolution: 2dppx) {
-    background: $brown url("../img/bg-catalog@2x.png");
-    background-size: 100%;
+    background: $brown url("../img/bg-catalog@2x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
