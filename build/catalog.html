@@ -69,6 +69,7 @@
       </nav>
       <div class="overlay overlay--hidden"></div>
     </header>
+    <div class="page-body__overlay"></div>
     <main class="catalog-page">
       <h1 class="visually-hidden">Catalog page of CH jewellery</h1>
       <div class="top-wrapper top-wrapper--catalog">
@@ -88,19 +89,19 @@
                 <ul class="filters__list">
                   <li class="filters__item">
                     <input type="checkbox" class="visually-hidden" name="necklaces" id="necklaces" checked>
-                    <label for="necklaces" tabindex="0">Necklaces</label>
+                    <label for="necklaces">Necklaces</label>
                   </li>
                   <li class="filters__item">
                     <input type="checkbox" class="visually-hidden" name="chokers" id="chokers" checked>
-                    <label for="chokers" tabindex="0">Chokers</label>
+                <label for="chokers">Chokers</label>
                   </li>
                   <li class="filters__item">
                     <input type="checkbox" class="visually-hidden" name="rings" id="rings">
-                    <label for="rings" tabindex="0">Rings</label>
+                    <label for="rings">Rings</label>
                   </li>
                   <li class="filters__item">
                     <input type="checkbox" class="visually-hidden" name="earrings" id="earrings" checked>
-                    <label for="earrings" tabindex="0">Earrings</label>
+                    <label for="earrings">Earrings</label>
                   </li>
                 </ul>
               </div>
@@ -111,11 +112,11 @@
                 <ul class="filters__list">
                   <li class="filters__item">
                     <input type="checkbox" class="visually-hidden" name="gold" id="gold">
-                    <label for="gold" tabindex="0">Gold</label>
+                    <label for="gold">Gold</label>
                   </li>
                   <li class="filters__item">
                     <input type="checkbox" class="visually-hidden" name="silver" id="silver">
-                    <label for="silver" tabindex="0">Silver</label>
+                    <label for="silver">Silver</label>
                   </li>
                 </ul>
               </div>
@@ -126,11 +127,11 @@
                 <ul class="filters__list">
                   <li class="filters__item">
                     <input type="checkbox" class="visually-hidden" name="pink-flamingo" id="pink-flamingo">
-                    <label for="pink-flamingo" tabindex="0">Pink flamingo</label>
+                    <label for="pink-flamingo">Pink flamingo</label>
                   </li>
                   <li class="filters__item">
                     <input type="checkbox" class="visually-hidden" name="dreams" id="dreams">
-                    <label for="dreams" tabindex="0">Dreams</label>
+                    <label for="dreams">Dreams</label>
                   </li>
                 </ul>
               </div>
@@ -153,6 +154,7 @@
             </button>
           </form>
         </section>
+        <div class="catalog-page__overlay"></div>
         <section class="catalog">
           <ul class="catalog__list">
             <li class="catalog__item">
@@ -405,7 +407,7 @@
 
     <section class="login-popup login-popup--closed">
       <div class="login-popup__upper-wrapper">
-        <a href="index.html" aria-label="Return back" tabindex="1">
+        <a href="index.html" aria-label="Return back" tabindex="2">
         </a>
       </div>
       <h2 class="visually-hidden">Log In form</h2>
@@ -413,17 +415,17 @@
       <form action="https://echo.htmlacademy.ru" method="post">
         <div class="login-popup__email">
           <label for="email-popup" class="visually-hidden">Имя</label>
-          <input type="email" placeholder="Your E-mail" name="user-email-popup" id="email-popup" required>
+          <input type="email" placeholder="Your E-mail" name="user-email-popup" id="email-popup" required tabindex="1">
         </div>
         <div class="login-popup__password">
           <label for="password-popup" class="visually-hidden">Password</label>
-          <input id="password-popup" type="password" placeholder="Password" name="user-password-popup" minlength="6" required>
+          <input id="password-popup" type="password" placeholder="Password" name="user-password-popup" minlength="6" required tabindex="1">
         </div>
-        <a href="#" class="login-popup__forget" aria-label="Reset password">Forgot your password?</a>
-        <button type="submit" class="login-popup__submit">Log In</button>
+        <a href="#" class="login-popup__forget" aria-label="Reset password" tabindex="1">Forgot your password?</a>
+        <button type="submit" class="login-popup__submit" tabindex="1">Log In</button>
         <div class="login-popup__registration">
           <p>Don’t have an account?</p>
-          <a href="#" aria-label="Registration">Sign up</a>
+          <a href="#" aria-label="Registration" tabindex="1">Sign up</a>
         </div>
       </form>
     </section>

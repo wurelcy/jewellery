@@ -273,6 +273,21 @@ $(document).ready(function () {
           block.classList.add('filters__block--closed');
         }
       });
+
+      block.addEventListener('keydown', function (evt) {
+        if (evt.key === 'Enter') {
+          if (block.classList.contains('filters__block--closed')) {
+
+            let insideElHeight = block.querySelector('.filters__body' + ' > *').clientHeight;
+
+            block.classList.remove('filters__block--closed');
+            block.querySelector('.filters__body').style.maxHeight = insideElHeight + 'px';
+          } else {
+            block.querySelector('.filters__body').style.maxHeight = '0px';
+            block.classList.add('filters__block--closed');
+          }
+        }
+      });
     });
   }
 });

@@ -69,6 +69,7 @@
       </nav>
       <div class="overlay overlay--hidden"></div>
     </header>
+    <div class="page-body__overlay"></div>
     <main class="main-page">
       <h1 class="visually-hidden">The main page of CH jewellery</h1>
       <div class="top-wrapper">
@@ -484,7 +485,7 @@
 
     <section class="login-popup login-popup--closed">
       <div class="login-popup__upper-wrapper">
-        <a href="index.html" aria-label="Return back" tabindex="1">
+        <a href="index.html" aria-label="Return back" tabindex="2">
         </a>
       </div>
       <h2 class="visually-hidden">Log In form</h2>
@@ -492,17 +493,17 @@
       <form action="https://echo.htmlacademy.ru" method="post">
         <div class="login-popup__email">
           <label for="email-popup" class="visually-hidden">Имя</label>
-          <input type="email" placeholder="Your E-mail" name="user-email-popup" id="email-popup" required>
+          <input type="email" placeholder="Your E-mail" name="user-email-popup" id="email-popup" required tabindex="1">
         </div>
         <div class="login-popup__password">
           <label for="password-popup" class="visually-hidden">Password</label>
-          <input id="password-popup" type="password" placeholder="Password" name="user-password-popup" minlength="6" required>
+          <input id="password-popup" type="password" placeholder="Password" name="user-password-popup" minlength="6" required tabindex="1">
         </div>
-        <a href="#" class="login-popup__forget" aria-label="Reset password">Forgot your password?</a>
-        <button type="submit" class="login-popup__submit">Log In</button>
+        <a href="#" class="login-popup__forget" aria-label="Reset password" tabindex="1">Forgot your password?</a>
+        <button type="submit" class="login-popup__submit" tabindex="1">Log In</button>
         <div class="login-popup__registration">
           <p>Don’t have an account?</p>
-          <a href="#" aria-label="Registration">Sign up</a>
+          <a href="#" aria-label="Registration" tabindex="1">Sign up</a>
         </div>
       </form>
     </section>

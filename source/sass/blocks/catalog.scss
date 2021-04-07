@@ -100,7 +100,7 @@
 
 @media (max-width: $tablet-width) {
   .catalog__list {
-    margin-top: 10px;
+    margin-top: 50px;
     grid-template-columns: 206px 206px 206px;
     margin-bottom: 67px;
   }
@@ -135,7 +135,7 @@
   }
 
   .catalog__list {
-    margin-top: 0;
+    margin-top: 40px;
     margin-bottom: 40px;
     grid-template-columns: 130px 130px;
     row-gap: 27px;

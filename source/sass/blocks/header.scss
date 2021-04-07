@@ -65,7 +65,7 @@
 }
 
 .header__login {
-  margin-right: 36px;
+
   margin-left: 86px;
   margin-bottom: 25px;
 
@@ -82,6 +82,7 @@
 .header__cart {
   margin-bottom: 25px;
   margin-right: 5px;
+  margin-left: 36px;
 
   &:hover,
   &:focus {
@@ -211,9 +212,19 @@
   }
 
   .header--opened {
-    height: 100vh;
+    position: absolute;
+    z-index: 4;
+  }
+
+  .header--opened ~ .page-body__overlay {
     position: fixed;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     z-index: 2;
+    background-color: $brown;
   }
 
   .header--opened .header__cart svg,

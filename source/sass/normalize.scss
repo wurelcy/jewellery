@@ -175,6 +175,9 @@ textarea {
 
 button,
 input { /* 1 */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   overflow: visible;
 }
 
