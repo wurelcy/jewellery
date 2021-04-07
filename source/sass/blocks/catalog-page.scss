@@ -37,6 +37,10 @@
   }
 }
 
+.catalog-page__overlay {
+    display: none;
+}
+
 @media (max-width: 1240px) {
   .catalog-page .container {
     width: 900px;
@@ -58,9 +62,7 @@
     padding-bottom: 94px;
   }
 
-  .catalog-page__overlay {
-    display: none;
-  }
+
 }
 
 @media (max-width: $mobile-width-only) {
